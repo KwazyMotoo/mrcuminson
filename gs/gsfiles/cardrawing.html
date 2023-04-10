@@ -1,0 +1,51 @@
+<html><head><base target="_blank"><base target="_blank"><link rel="stylesheet" href="https://sites.google.com/site/v113ks4k/style.css">
+    <script src="https://sites.google.com/site/v113ks4k/UnityProgress.js"></script>
+    <script src="https://sites.google.com/site/bghf4565f/UnityLoader.js"></script>
+
+    <script type="text/javascript">
+      var gameInstance;
+      window.onload = function () {
+        let  bttn = document.createElement( "button" );
+        bttn.appendChild(document.createTextNode( "PLAY NOW" ));
+        bttn.setAttribute('id', 'run_game');
+        bttn.style.display = 'none';
+        bttn.style.position = 'absolute';
+        document.body.appendChild(bttn);
+        bttn.style.display = 'block';
+        bttn.style.left = ((document.body.clientWidth - bttn.offsetWidth)/2) + 'px';
+        bttn.style.top = ((document.body.clientHeight - bttn.offsetHeight)/2) + 'px';
+        bttn.onclick = function () {
+          gameInstance = UnityLoader.instantiate("gameContainer", "https://images-docs-opensocial.googleusercontent.com/gadgets/proxy?container=fbk&url=https://sites.google.com/site/bghf4565f/WebGL.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}});
+          this.remove();
+        }
+      }
+    </script>
+    </head><body><div class="webgl-content">
+      <div id="gameContainer" style="width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; position: relative; background: rgb(255, 255, 255);"><canvas id="#canvas" width="815" height="675" style="cursor: none;"></canvas><div class="logo Light" style="display: none;"></div><div class="progress Light" style="display: none;"><div class="empty" style="width: 0%;"></div><div class="full" style="width: 100%;"></div></div></div>
+    </div>
+<style>
+button {
+  min-width: 100%;
+  font-family: fantasy;
+  appearance: none;
+  border: 1;
+  border-radius: 19px;
+  background: #27114c;
+  color: #fff;
+  padding: 18px 46px;
+  font-size: 42px;
+  cursor: pointer;
+}
+button:hover {
+  background: #411b73;
+}
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0px #cbd6ee;
+} 
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
