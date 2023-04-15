@@ -16,6 +16,21 @@
 
     </nav>
 
+<h1>Popular:</h1>
+<div class="games">
+    <a class="game" href="./gs/gsfiles/bob-the-robber-2/" style="--url: url('./gs/images/bob-the-robber-2.png')">
+        <div class="game-img"></div>
+        <div class="game-text">Bob the Robber 2</div>
+    </a>
+    <a class="game" href="./gs/gsfiles/vex7/" style="--url: url('./gs/images/vex7.jpeg')">
+        <div class="game-img"></div>
+        <div class="game-text">Vex 7</div>
+    </a>
+</div>
+<!--
+OLD HTML
+ONLY ADDED THE FIRST 2 FOR TESTING
+
     <div class="featured">
         <h1>Popular:</h1>
         <div class="column">
@@ -125,8 +140,74 @@
     </div>
         <h2> need a background, gui theme.
     </div>
+    -->
     <h2>Thanks to 3kh0 For The Games :D</h2>
     <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "85da04d4cfe44664817c6cc6b49ab9e2"}'></script><!-- End Cloudflare Web Analytics -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    html {
+        color-scheme: dark;
+    }
+
+    body {
+        background: black;
+    }
+
+    body * {
+        font-family: "Roboto";
+    }
+
+    .games {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 200px);
+        justify-content: space-between;
+        grid-gap: 2rem;
+        margin: 1rem 2rem 2rem 2rem;
+    }
+
+    .game {
+        height: 240px;
+        width: 200px;
+        background: black;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        -webkit-user-select: none;
+        user-select: none;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .game-img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: var(--url), linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
+        border-radius: 6px;
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .game-text {
+        position: absolute;
+        bottom: 1rem;
+        font-size: 1.2rem;
+        max-width: calc(100% - 1.5rem);
+        overflow: hidden;
+    }
+</style>
 </body>
 
 </html>
