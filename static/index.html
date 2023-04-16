@@ -26,9 +26,9 @@
     <link rel="stylesheet" href="index.css" />
     <script src="uv/uv.bundle.js" defer></script>
     <script src="uv/uv.config.js" defer></script>
-    <script src="register-sw.js" defer></script>
+    <script src="./static/register-sw.js" defer></script>
     <script src="search.js" defer></script>
-    <script src="index.js" defer></script>
+    <script src="./static/index.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -64,20 +64,18 @@
   </head>
 
   <body>
-
-    <form id="uv-form" class="flex-center">
-      <input
-        id="uv-search-engine"
-        value="https://www.google.com/search?q=%s"
-        type="hidden"
-      />
-      <input id="uv-address" type="text" placeholder="Run My Bills Up Pleasee." />
-    </form>
-    <div class="desc left-margin">
-      <p id="uv-error"></p>
-      <pre id="uv-error-code"></pre>
+<div id="search" class="hidden
+         bg-gray-700
+         m-0 
+         h-full w-full 
+         overflow-hidden">
+      <form class="flex m-auto pl-16 w-[45%]">
+        <input id="searchInput" class="p-3 
+               w-full h-15
+               input-bar" placeholder="Run Up Dem Bills V2!">
+      </form>
     </div>
-                  <footer>
+   <footer>
       <a
         title="The Official TIW/Kwazy Github"
         href="https://github.com/KwazyMotoo/starttiw"
