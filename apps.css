@@ -1,0 +1,52 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  background-color:#111;
+}
+
+.app{
+  justify-content:space-evenly;
+  
+}
+
+.app img{
+  width:200px;
+  height:200px;
+  border-radius: 5px;
+  border-color:black;
+  border-width:5px;
+  padding-left:60px;
+  
+}
+
+.app p{
+  color:white;
+  font-family: 'Comfortaa', cursive;
+  justify-content:space-evenly;
+  margin-left:120px;
+  
+  
+}
+
+h1{
+  color:white;
+  font-family: 'Passion One', cursive;
+  text-align:center;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 15%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
