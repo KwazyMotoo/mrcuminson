@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/static/uv/service/',
-    bare: 'https://node.starttiw.org/',
+    bare: 'http://node.starttiw.org/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/static/uv/uv.handler.js',
