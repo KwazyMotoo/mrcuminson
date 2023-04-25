@@ -5,7 +5,7 @@ function webretroEmbed(node, path, queries) {
 	// change rom path to absolute if it isn't already
 	if (queries.rom) {
 		var link = document.createElement("a");
-		link.href = (/^(https?:)?\/\//i).test(queries.rom) ? queries.rom : "roms/" + queries.rom;
+		link.href = (/^(https?:)?\/\//i).test(queries.rom) ? queries.rom : "./rom/roms/" + queries.rom;
 		queries.rom = link.href;
 	}
 	
