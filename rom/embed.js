@@ -1,16 +1,23 @@
-function webretroEmbed(node, path, queries) {
-	var frame = document.createElement("iframe");
-	frame.style = "border: none; display: block; width: 100%; height: 100%;";
-	
-	// change rom path to absolute if it isn't already
-	if (queries.rom) {
-		var link = document.createElement("a");
-		link.href = (/^(https?:)?\/\//i).test(queries.rom) ? queries.rom : "./rom/roms/" + queries.rom;
-		queries.rom = link.href;
-	}
-	
-	frame.src = path + "?" + Object.entries(queries).map(i => i.map(i => i && encodeURIComponent(i))).map(i => i[1] ? i.join("=") : i[0]).join("&");
-	node.appendChild(frame);
-	
-	return frame;
-}
+<div id="webretro-container"></div>
+<br>
+<input type="button" id="fullscreen" value="Fullscreen">
+<br>
+<br>
+
+<script src="https://binbashbanana.github.io/webretro/embed/embed.js"></script>
+
+<script>
+    var game = {system: "nes", rom: "2048.nes"}
+
+    var frame = webretroEmbed(document.getElementById("webretro-container"), "https://binbashbanana.github.io/webretro/", game);
+            document.getElementById("fullscreen").onclick = function() {
+                frame.requestFullscreen();
+            };
+</script>
+
+<style>
+    #webretro-container {
+        width: 800px;
+        height: 600px;
+    }
+</style>
