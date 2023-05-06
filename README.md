@@ -1,1 +1,3 @@
-#IF YOU ARE HERE, YOU ARE A DEV. IF YOU ARE NOT, LEAVE.
+# Repository for TIW website
+
+This repository is for **DEVELOPERS ONLY**
