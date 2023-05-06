@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<title>Example webretro embed</title>
-		<style>
-			#webretro-container {
-				width: 800px;
-				height: 600px;
-			}
-		</style>
-	</head>
-	<body>
-		<h1>Pokemon Fire Red</h1>
-		<div id="webretro-container"></div>
-		<br>
-		<input type="button" id="fullscreen" value="Fullscreen">
-		<br>
-		<br>
-		<h1>with luv by the TIW Team uwu</h1>
+<div id="webretro-container"></div>
+<br>
+<input type="button" id="fullscreen" value="Fullscreen">
+<br>
+<br>
+
 <script src="https://binbashbanana.github.io/webretro/embed/embed.js"></script>
-		<script>
-			var frame = webretroEmbed(document.getElementById("webretro-container"), "https://binbashbanana.github.io/webretro/", {system: "gba", rom: "fireemblem.gba"});
-			document.getElementById("fullscreen").onclick = function() {
-				frame.requestFullscreen();
-			};
-		</script>
+
+<script>
+    var game = {system: "gba", rom: "fireemblem.gba"}
+
+    var frame = webretroEmbed(document.getElementById("webretro-container"), "https://binbashbanana.github.io/webretro/", game);
+            document.getElementById("fullscreen").onclick = function() {
+                frame.requestFullscreen();
+            };
+</script>
+
+<style>
+    #webretro-container {
+        width: 800px;
+        height: 600px;
+    }
+</style>
+
 	</body>
 </html>
