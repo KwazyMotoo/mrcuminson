@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Fire Emblem</title>
+		<style>
+			#webretro-container {
+				width: 800px;
+				height: 600px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Fire Emblem</h1>
+		<div id="webretro-container"></div>
+		<br>
+		<input type="button" id="fullscreen" value="Fullscreen">
+		<br>
+		<br>
+<h1> made wif wuv by the TIW Team uwu</h1>
+		
+		<script type="text/javascript" src="embed.js"></script>
+		<script>
+			var frame = webretroEmbed(document.getElementById("webretro-container"), "../", {system: "gb/gbc/gba", rom: "fireemblem.gba"});
+			document.getElementById("fullscreen").onclick = function() {
+				frame.requestFullscreen();
+			};
+		</script>
+	</body>
+</html>
