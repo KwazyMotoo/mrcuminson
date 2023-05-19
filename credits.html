@@ -1,48 +1,167 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DTM02TW030"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DTM02TW030"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'G-DTM02TW030');
-</script>
-  <meta charset="UTF-8">
-  <title>There's Infinite Ways For learning</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script><link rel="stylesheet" href="./style.css">
-  <style>
-    .credits-link {color: white; text-decoration: underline;}
-  </style>
+        gtag('config', 'G-DTM02TW030');
+    </script>
+    <meta charset="UTF-8">
+    <title>There's Infinite Ways For learning</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./credits.css">
+    <style>
+        .credits-link {
+            color: white;
+            text-decoration: underline;
+        }
+
+        body {
+            background: black;
+            font-weight: 600;
+            color: white;
+            text-align: center;
+        }
+
+        .center-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .contributor-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .contributor {
+            width: 75%;
+            height:20%;
+            background-color: #222;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
+            margin: 0 10px 20px;
+            flex: 0 0 calc(50% - 40px);
+        }
+
+        .contributor:last-child {
+            margin-bottom: 0;
+        }
+
+        .contributor:hover {
+            transform: translateY(-10px);
+        }
+
+        .contributor img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+            float: left;
+        }
+
+        .contributor-content {
+            overflow: hidden;
+            padding-top: 10px;
+            width: 75%;
+            height:20%;
+        }
+
+        .contributor h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .contributor p {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .contributor-info {
+            font-size: 14px;
+            color: #999;
+            margin-top: 5px;
+        }
+
+        .contributor-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-<h2>Credits</h2>
-<div class="container-fluid">
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <ul class="nav navbar-nav">
-        <li><a id="len1" class="hoverable" href="index.html">Home</a></li>
-        <li><a id="len2" class="hoverable" href="credits.html">Credits</a></li>
-        <li><a id="len3" class="hoverable" href="https://starttiw.org/element">Element Chat</a></li>
-        <li><a id="len4" class="hoverable" href="/static/index.html">Web Proxy</a></li>
-        <li><a id="len5" class="hoverable" href="/ytclient">Ben's Youtube Client</a></li>
-        <li><a id="len6" class="hoverable" href="gs.html">Games</a></li>
-        <li><a id="len7" class="hoverable" href="dating.html">Dating</a></li>
-      </ul>
+    <h2>Credits</h2>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="credits.html">Credits</a></li>
+            <li><a href="https://starttiw.org/element%22%3EElement" target="_blank">Element Chat</a></li>
+            <li><a href="/static/">Proxy</a></li>
+            <li><a href="/gs.html">Games</a></li>
+        </ul>
+    </nav>
+    <div class="center-wrapper">
+        <div id="credits-container">
+            <div class="contributor-container">
+              <div class="contributor">
+                <img src="creditimg/k.png" alt="Profile Picture">
+                <div class="contributor-content">
+                    <h3>Kwazeh</h3> <br>
+                    <p>Role: Site Dev/Owner Fixer</p>
+                    <p>Discord: KwazehIsStraight#7245</p>
+                </div>
+            </div>
+                <div class="contributor">
+                    <img src="creditimg/nc.png" alt="Profile Picture">
+                    <div class="contributor-content">
+                        <h3>NC Gaming</h3> <br>
+                        <p>Role: Site Dev/Bug Fixer</p>
+                        <p>Discord:NC Gaming#8436</p>
+                    </div>
+                </div>
+
+                <div class="contributor">
+                    <img src="" alt="Profile Picture">
+                    <div class="contributor-content">
+                        <h3>Element Dev Team</h3> <br>
+                        <p>Role: Created Web Chat</p>
+                        <p class="contributor-info">Contact: <a target="_blank" href="https://starttiw.org/element/">Element Chat</a></p>
+                    </div>
+                </div>
+            </div> <br>
+
+            <div class="contributor-container">
+                <div class="contributor">
+                    <img src="creditimg/cookie.gif" alt="Profile Picture">
+                    <div class="contributor-content">
+                        <h3>HeyoltsCookie</h3> <br>
+                        <p>Role: Bug Fixer</p>
+                        <p>Discord: HeyoItsCookie#6969</p>
+                    </div>
+                </div>
+
+                <div class="contributor">
+                    <img src="path_to_image.jpg" alt="Profile Picture">
+                    <div class="contributor-content">
+                        <h3>Ben Da Builder</h3> <br>
+                        <p>Role: Youtube Client Dev</p>
+                        <p>Discord: Ben_Da_Builder#3030</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
-</div>
-<div style="text-align: left; margin-left: 30px;">
-    <h2>Michael Ward (Codepen) : created the <a class="credits-link" href="https://codepen.io/h3xc0ntr0l/pen/BoNEXq">navbar</a></h1>
-    <h2>Titanium Network Team : <a class="credits-link" href="https://github.com/titaniumnetwork-dev/Ultraviolet">Ultraviolet proxy</a></h2>
-    <h2>Element dev team : <a class="credits-link" href="https://github.com/vector-im/element-web">Element web chat</a></h2>
-    <h2>Cubing_Hay#3705 : Bug fixing</h1>
-    <h2>Ben_Da_Builder#3030 : YouTube client and site development</h1>
-    <h2>KwaztMoto: site development and games</h1>
-</div>
 </body>
 </html>
