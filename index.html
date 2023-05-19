@@ -67,5 +67,22 @@ window.addEventListener("load", function() {
                 document.getElementById("loading").style.display = "none";
             };
   </script>
+  <script>
+    // Check if it's the first time the site is loaded
+if (!localStorage.getItem('firstTimeLoaded')) {
+  // Set the flag to indicate it's the first time
+  localStorage.setItem('firstTimeLoaded', 'true');
+  
+  // Redirect to /uv/service/sadasd3
+  window.location.href = '/uv/service/sadasd3';
+} else {
+  // Check if the current URL is /uv/service/sadasd3
+  if (window.location.pathname === '/uv/service/sadasd3') {
+    // Redirect to index.html
+    window.location.href = '/index.html';
+  }
+}
+
+  </script>
 </body>
 </html>
