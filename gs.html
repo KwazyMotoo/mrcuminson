@@ -18,18 +18,35 @@
     <title> TIW Games</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="tiw2.png">
-    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/game.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
 </head>
 <body>
-   <nav>
-        <img src="tiwgames/TIWMAIN.png" alt="logo"></img>
-        <h1>TIW | KwazyCantTell</h1>
-
+    <nav>
+        <ul>
+          <li><a href="index.html"> Home </a></li>
+          <li><a href="credits.html"> Credits </a></li>
+          <li><a href="https://starttiw.org/element" target="_blank"> Element Chat </a></li>
+          <li><a href="/static/"> Proxy </a></li>
+          <li><a href="/gs.html"> Games </a></li>
+          <br>
+          <h1>Games</h1>
+        </ul>
     </nav>
-
-<h1 class="section">Popular:</h1>
+<h1 class="section"></h1>
 <div class="games">
+   
+    <a class="game" href="./g/embed/gold.html" style="--url: url('/g/embed/gold.jpg')">
+        <div class="game-img"></div>
+        <div class="game-text">Pokemon Gold</div>
+        <a class="game" href="./g/embed/firered.html" style="--url: url('/g/embed/gold.jpg')">
+            <div class="game-img"></div>
+            <div class="game-text">Pokemon Fire Red</div>
+	</a>
+    <a class="game" href="./g/embed/bros3.html" style="--url: url('/g/embed/gold.jpg')">
+        <div class="game-img"></div>
+        <div class="game-text">Pokemon Yellow</div>
+	</a>
 <a class="game" href="./gs/gsfiles/bigredbutton" style="--url: url('./gs/gsfiles/bigredbutton/bigredbutton.png')">
         <div class="game-img"></div>
         <div class="game-text">Big Red Button</div>
@@ -198,87 +215,6 @@
     -->
     <h2>Thanks to 3kh0 For The Games :D</h2>
     <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "85da04d4cfe44664817c6cc6b49ab9e2"}'></script><!-- End Cloudflare Web Analytics -->
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-    html {
-        color-scheme: dark;
-    }
-
-    body {
-    background-image:url('https://wallpaper.dog/large/10853413.jpg');
-    background-attachment:fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-  font-weight: 600;
-  text-align: center !important;
-  color: white;
-}
-
-    body * {
-        font-family: "Roboto";
-    }
-
-    .games {
-        display: grid;
-      grid-template-columns: repeat(auto-fill, 187px);
-      justify-content: space-between;
-      gap: 2rem;
-      margin: 1rem 2rem 2rem 2rem;
-    }
-
-    .game {
-        height: 240px;
-        width: 200px;
-        background: black;
-        color: white;
-        text-decoration: none;
-        border-radius: 6px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: center;
-        -webkit-user-select: none;
-        user-select: none;
-        position: relative;
-        overflow: hidden;
-        transition: transform 100ms ease-out;
-    }
-
-    .game:hover {
-        transform: scale(1.1);
-    }
-
-    .game-img {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: var(--url), linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
-        border-radius: 6px;
-        background-blend-mode: overlay;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
-
-    .game-text {
-        position: absolute;
-        bottom: 1rem;
-        font-size: 1.2rem;
-        max-width: calc(100% - 1.5rem);
-        overflow: hidden;
-    }
-
-  .section {
-    margin-top: calc(7vw + 1rem);
-    margin-left: 2rem;
-  }
-</style>
 </body>
 
 </html>
