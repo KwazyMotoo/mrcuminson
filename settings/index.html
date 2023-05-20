@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="style.css"> </script>
+
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="The better unblocked games website." />
-  <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">\
-  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed&display=swap" rel="stylesheet">
-
+  <meta name="keywords" content="front-end web developer, unblocked, games, google sites, unblocked games mom, ublocked, code, coding, programmer, development, javascript, jquery, bootstrap, sass, less, git" />
+  <meta name="author" content="3kh0" />
+  <meta content="3kh0" property="og:title" />
+  <meta content="The better unblocked games website." property="og:description" />
   <meta content="/images/logo.png" property="og:image" />
-
   
+  <title>Settings | Aroria</title>
   <link href="./images/logo.png" rel="icon" />
-  <link href="index.css" rel="stylesheet" />
+  <link href="./css/index.css" rel="stylesheet" />
 </head>
 
+<body>
+    <nav style="width:100%">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="settings.html">Settings</a>
+    </nav>
 
-
-  <div class="section-title">Tab Cloak</div> <br>
-  <div class="buttons"> <center>
-    <input id="title" class="input" placeholder="Title" onkeyup="setTitle(this.value)" />
-    <input id="icon" class="input" placeholder="Favicon" onkeyup="setFavicon(this.value.trim())" />
-  </div></center>
-  <br><center>
-  <p class="section-text">Or choose a readymade cloak:</p>
-  <div class="buttons">
-      <select name="Readymade Cloaks" id="premadecloaks" title="Cloaks">
+<br><br><br><br><br><br><br><br><br>
+<center>  
+  <div class="section-title" style="font-family: 'Acme', sans-serif; text-align: center; font-size:30px; align-items:center; color:lightpink">Tab Cloaking</div> <br><br>
+  <div class="buttons" style="border-radius:15px;">
+    <input  style="border-radius:7.5px;border-color:orangered;font-family: 'Bubbler One', sans-serif; width:300px;font-size:12px; height: 25px;"id="title" class="input" placeholder="                                          Title" onkeyup="setTitle(this.value)" />
+   
+    <br><br> <input style="border-radius:7.5px;border-color:blue;font-family: 'Bubbler One', sans-serif; width:250px;font-size:12px; height: 25px;" id="icon" class="input" placeholder="                               Favicon"   " onkeyup="setFavicon(this.value.trim())" />
+  </div>
+  <br>
+  <p class="section-text" style="font-family: 'Acme', sans-serif;">Or choose a readymade cloak:</p>
+  <div class="buttons" style="font-family: 'Acme', sans-serif;">
+      <select name="Readymade Cloaks" id="premadecloaks" title="Cloaks" style="font-family: 'Acme', sans-serif;font-size: 15px;">
         <option value="search">Google Search</option>
         <option value="drive">Google Drive</option>
         <option value="youtube">YouTube</option>
@@ -36,23 +49,73 @@
         <option value="canvas">Canvas</option>
         <option value="zoom">Zoom</option>
         <option value="khan">Khan Academy</option>
-      </select></center><center> <br>
+      </select>
       
-      <button class="button button2" onclick="setCloak()">Set readymade cloak</button>
-      <button class="button button2" onclick="resetTab()">Reset</button>
+      <button style="font-family: 'Acme', sans-serif; font-size:15px" class="button" onclick="setCloak()">Set readymade cloak</button>
+      <button style="font-family: 'Acme', sans-serif; font-size:15px" class="button" onclick="resetTab()">Reset</button>
     </div>
-      </center>
+</center>
+  <style> 
+      /* Navbar styles */
 
-  <script src="style.css"> </script>
+      body{
+        background-color:black ;
+      }
+      
+      nav {
+        background-color: black;
+        color: #fff;
+        padding: 10px;
+        display: flex;
+        justify-content:space-evenly ;
+        align-items: center;
+        position:fixed ;
+        top: 0;
+        width: 120%;
+        font-family: 'Fredoka One', cursive;
+        right: 4px;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 10px;
+        margin-right: 100px;
+        margin-left: 100px;
+      }
+  </style>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="./js/main.js.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/settings.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
     new Crate({
-      server: '971769908205604864', 
-      channel: '1017203047388160050', 
+      server: '971769908205604864', // EchoDev
+      channel: '1017203047388160050', // #guest-chat
       notifications: false,
     })
   </script>
 </body>
-</center>
+
 </html>
