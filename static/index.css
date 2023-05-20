@@ -490,3 +490,104 @@ form input:focus {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
+
+
+
+nav{
+  padding:5px;
+  border-radius: 15px;
+  background-color: black;
+  border-style: solid;
+  border-color: blue;
+  width:40%;
+  margin-left: 30.0%;
+  margin-right: 30.0%;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+}
+
+li {
+  display: inline;
+}
+
+ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding-left: 6px;
+  padding-right: 6px;
+  font-size: 20px;
+  position: relative;
+  transition: transform 0.5s;
+}
+
+ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #00aaff;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+
+ul li:hover a {
+  transform: translateY(-5px);
+  text-decoration: none;
+}
+
+ul li:hover a::after {
+  transform: scaleX(1);
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    text-align: center !important;
+    float: none;
+    display: inline-block;
+  }
+}
+body {
+background:none;
+font-weight: 600;
+text-align: center !important;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity:0.9;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -100;
+}
+
+.group{
+  color:lightskyblue;
+  background: black;
+  border-radius: 15px;
+  padding:15px; 
+  margin-top: 5%;
+  
+}
+
+h2{
+  padding:5px;
+}
+#uv-address{
+  border-width:2px;
+  border-color: #00aaff;
+  font-weight: bold;
+  color:yellow;
+}
+input::placeholder {
+  color: red; /* Change the color to your desired value */
+  text-align: center;
+  font-weight: bold;
+}
