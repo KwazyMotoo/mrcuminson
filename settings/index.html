@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="style.css"> </script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The better unblocked games website." />
+  <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">\
+  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed&display=swap" rel="stylesheet">
+
+  <meta content="/images/logo.png" property="og:image" />
+
+  
+  <link href="./images/logo.png" rel="icon" />
+  <link href="index.css" rel="stylesheet" />
+</head>
+
+
+
+  <div class="section-title">Tab Cloak</div> <br>
+  <div class="buttons"> <center>
+    <input id="title" class="input" placeholder="Title" onkeyup="setTitle(this.value)" />
+    <input id="icon" class="input" placeholder="Favicon" onkeyup="setFavicon(this.value.trim())" />
+  </div></center>
+  <br><center>
+  <p class="section-text">Or choose a readymade cloak:</p>
+  <div class="buttons">
+      <select name="Readymade Cloaks" id="premadecloaks" title="Cloaks">
+        <option value="search">Google Search</option>
+        <option value="drive">Google Drive</option>
+        <option value="youtube">YouTube</option>
+        <option value="gmail">Gmail</option>
+        <option value="calendar">Google Calendar</option>
+        <option value="meets">Google Meet</option>
+        <option value="classroom">Google Classroom</option>
+        <option value="canvas">Canvas</option>
+        <option value="zoom">Zoom</option>
+        <option value="khan">Khan Academy</option>
+      </select></center><center> <br>
+      
+      <button class="button button2" onclick="setCloak()">Set readymade cloak</button>
+      <button class="button button2" onclick="resetTab()">Reset</button>
+    </div>
+      </center>
+
+  <script src="style.css"> </script>
+  <script src="./js/index.js"></script>
+  <script src="./js/settings.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+    new Crate({
+      server: '971769908205604864', 
+      channel: '1017203047388160050', 
+      notifications: false,
+    })
+  </script>
+</body>
+</center>
+</html>
