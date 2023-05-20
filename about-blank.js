@@ -1,5 +1,5 @@
 function Go() {
-    let url = "https://" + window.location.href;
+    let url = window.location.href;
     maskedWindow = window.open();
 
     const doc = maskedWindow.document;
