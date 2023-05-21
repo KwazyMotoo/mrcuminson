@@ -194,6 +194,42 @@ ul li:hover a::after {
 .section-title{
   font-size: 25px;
   color:aquamarine;
-  font-family: 'Righteous', cursive;
+  font-family: 'Righteous', cursive;}
 
+  .background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.2;
+    height: 100%;
+    object-fit: cover;
+    z-index: -100;
+  }  
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans&display=swap');
+
+.section-text{
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: bold;
+  color:greenyellow;
+  text-shadow: 2px 2px 4px rgba(74, 255, 3, 1);
+}
+
+#premadecloaks{
+  width:17%;
+  height:35px;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 25px;
+  background-color:lime
+}
+.button{
+  color:lime;
+  background-color: darkgreen;
+  height:30px;
+  width:10%;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: black;
+}

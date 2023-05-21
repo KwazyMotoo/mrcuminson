@@ -21,11 +21,15 @@
 </head>
 
 <body>
+  <video class="background-video" autoplay muted loop>
+    <source src="bg.mp4" type="video/mp4">
+    <!-- Add additional source elements for different video formats -->
+  </video>
 <center>  <br>
   <nav>
     <ul>
-      <li><a href="index.html"> Home </a></li>
-      <li><a href="credits.html"> Credits </a></li>
+      <li><a href="/index.html"> Home </a></li>
+      <li><a href="/credits.html"> Credits </a></li>
       <li><a href="https://starttiw.org/element" target="_blank"> Element Chat </a></li>
       <li><a href="/static/"> Proxy </a></li>
       <li><a href="/gs.html"> Games </a></li> 
@@ -52,22 +56,14 @@
         <option value="zoom">Zoom</option>
         <option value="khan">Khan Academy</option>
       </select>
-      
+      <br> <br>
       <button class="button" onclick="setCloak()">Set readymade cloak</button>
       <button class="button" onclick="resetTab()">Reset</button>
     </div>
 </center>
-
-  <script src="./js/main.js.js"></script>
+  <script src="./js/settings.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/settings.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
-    new Crate({
-      server: '971769908205604864', // EchoDev
-      channel: '1017203047388160050', // #guest-chat
-      notifications: false,
-    })
-  </script>
 </body>
 <style>
   
