@@ -1,0 +1,199 @@
+.hoverable {
+  display: inline-block;
+  backface-visibility: hidden;
+  vertical-align: middle;
+  position: relative;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  tranform: translateZ(0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.hoverable:before {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  content: "";
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+  /* W3C */
+  transition-duration: 0.3s;
+  transition-property: transform, opacity;
+}
+
+.hoverable:hover, .hoverable:active, .hoverable:focus {
+  transform: translateY(-5px);
+}
+
+.hoverable:hover:before, .hoverable:active:before, .hoverable:focus:before {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+@keyframes bounce-animation {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.bounce {
+  animation-name: bounce-animation;
+  animation-duration: 2s;
+}
+
+/*everything below here is just setting up the page, so dont worry about it */
+@media (min-width: 768px) {
+  .navbar {
+    text-align: center !important;
+    float: none;
+    display: inline-block;
+  }
+}
+body {
+    background:black;
+  font-weight: 600;
+  color: white;
+  text-align: center !important;
+}
+
+nav{
+  padding:5px;
+  font-family: 'Wix Madefor Display', sans-serif;
+  border-radius: 15px;
+  background-color: black;
+  border-style: solid;
+  border-color: blue;
+  width:40%;
+  margin-left: 30.0%;
+  margin-right: 30.0%;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+}
+
+li {
+  display: inline;
+}
+
+ul li a {
+  display: inline-block;
+  list-style-type: none;
+  font-family: 'Wix Madefor Display', sans-serif;
+  color:blue;
+  padding-left: 6px;
+  padding-right: 6px;
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+  transition: transform 0.5s;
+}
+
+ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  text-decoration: none;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #00aaff;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+
+ul li:hover a {
+  transform: translateY(-5px);
+  text-decoration: none;
+}
+
+ul li:hover a::after {
+  transform: scaleX(1);
+}
+
+.page-title {
+  opacity: 0.75 !important;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -100;
+}
+
+#alienhub{
+  border-color: black;
+  border-style: solid;
+  border-radius:15px;
+
+
+}
+
+
+
+@keyframes glowBorder {
+  0% {
+    border-color: #0ff;
+    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+  }
+  50% {
+    border-color: #00ff00;
+    box-shadow: 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00;
+  }
+  100% {
+    border-color: #0ff;
+    box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+  }
+}
+
+#icon, #title  {
+  border-radius: 15px;
+  width: 12.5%;
+  height: 205%;
+  padding: 5px;
+  border: 2px solid #0ff;
+  background-color: #000;
+  color:#178;
+  margin-top: 1%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  animation: glowBorder 5s linear infinite;
+}
+
+.section-title{
+  font-size: 25px;
+  color:aquamarine;
+  font-family: 'Righteous', cursive;
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
