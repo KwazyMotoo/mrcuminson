@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DTM02TW030"></script>
+  <link rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta content="The better unblocked games website." property="og:description" />
+  <meta content="/images/logo.png" property="og:image" />
+  
+  <title>Settings | TIW</title>
+  <link href="./images/logo.png" rel="icon" />
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <video class="background-video" autoplay muted loop>
+    <source src="bg.mp4" type="video/mp4">
+    <!-- Add additional source elements for different video formats -->
+  </video>
+<center>  <br>
+  <nav>
+    <ul>
+      <li><a href="/index.html"> Home </a></li>
+      <li><a href="/credits.html"> Credits </a></li>
+      <li><a href="https://starttiw.org/element" target="_blank"> Element Chat </a></li>
+      <li><a href="/static/"> Proxy </a></li>
+      <li><a href="/gs.html"> Games </a></li> 
+      <li><a href="/settings/"> Settings </a></li> <br>
+    </ul>
+</nav> <br> <br>
+<div class="section-title"> Tab Cloaking  </div>  <br> <br>
+
+  <div class="buttons">
+    <input id="title" class="input" placeholder="Title" onkeyup="setTitle(this.value)" /> <br><br>
+    <input id="icon" class="input" placeholder="Favicon" onkeyup="setFavicon(this.value.trim())" />
+  </div>
+  <br>
+  <p class="section-text">Or choose a readymade cloak:</p>
+  <div class="buttons">
+      <select name="Readymade Cloaks" id="premadecloaks" title="Cloaks" style="font-family: 'Acme', sans-serif;font-size: 15px;">
+        <option value="search">Google Search</option>
+        <option value="drive">Google Drive</option>
+        <option value="youtube">YouTube</option>
+        <option value="gmail">Gmail</option>
+        <option value="calendar">Google Calendar</option>
+        <option value="meets">Google Meet</option>
+        <option value="classroom">Google Classroom</option>
+        <option value="canvas">Canvas</option>
+        <option value="zoom">Zoom</option>
+        <option value="khan">Khan Academy</option>
+      </select>
+      <br> <br>
+      <button class="button" onclick="setCloak()">Set readymade cloak</button>
+      <button class="button" onclick="resetTab()">Reset</button>
+    </div>
+</center>
+  <script src="./js/settings.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/settings.js"></script>
+</body>
+<style>
+  
+</style>
+</html>
