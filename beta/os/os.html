@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OS Shop</title>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="os.css">
+</head>
+  <h1>OS Shop</h1> <br>
+  <center><a id="back"href="game.html"> Click Here to Go Back to LOC WIP </a> </center>
+  <div id="osShop">
+  <h2>OS Shop</h2>
+  <div class="osItem">
+    <img src="os1.png" alt="OS 1" />
+    <h3>winows fhone</h3>
+    <p>Golden Keys: 10</p>
+    <p>Autoclick: 0.5 LOC Per Second(LPS)</p>
+    <button onclick="windowsphone();">Buy</button>
+  </div>
+  <div class="osItem">
+    <img src="os2.png" alt="OS 2" />
+    <h3>Amezon kendle</h3>
+    <p>Golden Keys: 50</p>
+    <p>Autoclick: 0.75</p>
+    <button onclick="">Buy</button>
+  </div>
+  <div class="osItem">
+    <img src="os3.png" alt="OS 3" />
+    <h3>nakia</h3>
+    <p>Golden Keys: 75</p>
+    <p>Autoclick: 2</p>
+    <button onclick="">Buy</button>
+  </div>
+  <div class="osItem">
+    <img src="os4.png" alt="OS 4" />
+    <h3>powerBook 100</h3>
+    <p>Golden Keys: 125</p>
+    <p>Autoclick: 4.5</p>
+    <button onclick="">Buy</button>
+  </div>
+  <div class="osItem">
+    <img src="os5.png" alt="OS 5" />
+    <h3>shitty ofbrand windows xp</h3>
+    <p>Golden Keys: 300</p>
+    <p>Autoclick: 7</p>
+    <button onclick="">Buy</button>
+  </div>
+  <div class="osItem">
+    <img src="os6.png" alt="OS 6" />
+    <h3>windows xp</h3>
+    <p>Golden Keys: 500</p>
+    <p>Autoclick: 9</p>
+    <button onclick="">Buy</button>
+  </div>
+  <div class="osItem">
+    <img src="os7.png" alt="OS 7" />
+    <h3>Arch Linux >:)</h3>
+    <p>Golden Keys: 500000</p>
+    <p>Autoclick: 100</p>
+    <button onclick="">Buy</button>
+  </div>
+  <!-- Add more OS items as needed -->
+</div>
+<div id="goldenkeys">Golden Keys: 0</div>
+
+  <script>
+    // Set the value of goldenKeys and autoclick in localStorage
+let locCount = parseFloat(window.opener.localStorage.getItem('locCount')) || 0;
+let xpCount = parseFloat(window.opener.localStorage.getItem('xpCount')) || 0;
+let level = parseInt(window.opener.localStorage.getItem('level')) || 1;
+let goldenKeys = parseInt(window.opener.localStorage.getItem('goldenKeys')) || 0;
+let click = parseFloat(window.opener.localStorage.getItem('click')) || 0.25;
+let autoclick = parseFloat(window.opener.localStorage.getItem('autoclick')) || 0;
+
+
+  </script>
+<body>
