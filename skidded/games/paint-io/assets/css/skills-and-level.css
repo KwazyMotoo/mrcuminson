@@ -1,0 +1,233 @@
+#skills-wrapper-center {
+    margin: 0 auto;
+}
+
+#activeSkillsLabel {
+    margin-top: 20px;
+}
+
+#skills-wrapper-center .delimitr {
+    width: 100%;
+    border: 1px solid white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.level-progress-bar-wrapper {
+    width: 90%;
+    height: 20px;
+    background: black;
+    margin: 0 auto;
+}
+
+.level-progress-bar-wrapper .label {
+    position: absolute;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 3px;
+}
+
+.level-progress-bar-wrapper .progress-bar-inner {
+    background: red;
+    width: 45%;
+    height: 100%
+}
+
+.skill-slot {
+    border: #5100609c 3px solid;
+    border-radius: 15px;
+    width: 52px;
+    height: 52px;
+    margin: 3px;
+    display: inline-block;
+}
+
+.skill-selector-slot .level-badge {
+    position: absolute;
+    margin-left: 69px;
+    margin-top: 22px;
+    zoom: 0.6 !important;
+}
+
+.skill-slot.active {
+    border: #f7ffb1 3px solid;
+    border-radius: 12px;
+    animation: skillSlotSelect-animation 600ms infinite alternate;
+    -webkit-animation: skillSlotSelect-animation 600ms infinite alternate;
+}
+
+#skillSelectModalWrapper {
+    margin-top: 16px;
+}
+
+#skillSelectModalWrapper .skill-slot.locked-skill-slot {
+    cursor: pointer;
+    pointer-events: all;
+}
+
+#skillSelectModalWrapper .skill-slot {
+    margin-left: 13px;
+}
+
+.lock {
+    display: block;
+    background: url(../ui/vector/skills_locker_mark.svg) no-repeat;
+    width: 19px;
+    height: 21px;
+    margin: 0 auto;
+    position: relative;
+    transform: translate(6%, 72%);
+
+
+    /*position: absolute;*/
+    /*margin-top: -44px;*/
+    /*margin-left: 23px;*/
+}
+
+.skill-slot .lock {}
+
+.skill-list-slot .lock {
+    width: 12px !important;
+    height: 14px !important;
+    transform: translate(6%, 84%) !important;
+}
+
+.skill-list-slot .skill-small {
+    position: absolute;
+    margin-left: 60px;
+    margin-top: 28px;
+}
+
+/*NEW*/
+.skill.invisible {
+    background: url(../../../../index.html) no-repeat;
+}
+
+.skill.teleport {
+    background: url(../../../../index.html) no-repeat;
+}
+
+.skill.conquer {
+    background: url(../../../../index.html) no-repeat;
+}
+
+.skill.invisibility_jammer {
+    background: url(../../../../index.html) no-repeat;
+}
+
+.skill.radar {
+    background: url(../../../../index.html) no-repeat;
+}
+
+.skill.freezer {
+    background: url(../../../../index.html) no-repeat;
+}
+
+.skill.reverse_controller {
+    background: url(../../../../index.html) no-repeat;
+}
+
+.skill.protector {
+    background: url(../../../../index.html) no-repeat;
+}
+
+.skill-slots-wrapper .skill-slot .skill {
+    width: 64px;
+    height: 64px;
+}
+
+.skill-slot .skill {
+    width: 52px;
+    height: 52px;
+}
+
+.skill-slot .empty {
+    width: 52px;
+    height: 52px;
+    background: #480049;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.skill-slot .gemIcon {
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    margin-left: 9px;
+    margin-top: 16px;
+}
+
+.skill-list-slot {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border: #f7ffb100 2px solid;
+    border-radius: 11px;
+}
+
+.skill-list-slot .empty {
+    width: 40px;
+    height: 40px;
+    background: #480049;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.skill-list-slot.active {
+    border: #f7ffb1 2px solid;
+    animation: skillSlotSelect-animation 600ms infinite alternate;
+    -webkit-animation: skillSlotSelect-animation 600ms infinite alternate;
+}
+
+.skill-list-slot .skill {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.skill-list-slot .owned-mark {
+    background: url(../../../../index.html) no-repeat;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    margin-left: 28px;
+    margin-top: -1px;
+}
+
+.skill-list-slot .unknown {
+    position: absolute;
+    font-size: 32px;
+    color: white;
+    margin: 0 auto;
+    margin-left: 13px;
+    margin-top: 7px;
+}
+
+@keyframes skillSlotSelect-animation {
+    0% {
+        filter: opacity(0.5);
+        -webkit-filter: opacity(0.5);
+    }
+    100% {
+        filter: opacity(1);
+        -webkit-filter: opacity(1);
+    }
+}
+
+@-webkit-keyframes skillSlotSelect-animation {
+    0% {
+        filter: opacity(0.5);
+        -webkit-filter: opacity(0.5);
+    }
+    100% {
+        filter: opacity(1);
+        -webkit-filter: opacity(1);
+    }
+}
+
+
+.ingame-ui .skill-slot .gemIcon {
+    margin-left: 52px;
+    margin-top: -19px;
+}

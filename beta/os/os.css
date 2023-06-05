@@ -1,0 +1,55 @@
+body{
+  background-color: black;
+}
+
+h1{
+  color:white;
+  text-align: center;
+}
+#osMenu{
+  margin-top: 5%;
+}
+#osShop {
+  text-align: center;
+}
+
+.osItem {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+.osItem img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.osItem h3 {
+  font-size: 18px;
+  color:red;
+  margin-bottom: 5px;
+}
+
+.osItem p {
+  margin: 0;
+  color:lightgreen
+}
+
+.osItem button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#back{
+  color:lightblue;
+  text-align:center;
+  text-decoration: none;
+  font-weight:bold;
+}

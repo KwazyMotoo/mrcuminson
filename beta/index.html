@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LOC WIP</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VX270PKF65"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VX270PKF65');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3755990009598294"
+     crossorigin="anonymous"></script>
+</head>
+<body> <div id="gameContent">
+  <div id="clickerContainer">
+    <h1>LOC WIP</h1>
+    <h3>This is Now Open BETA</h3>
+    <p>Type Like A Maniac, You Get LOC, And You Get Cool!</p>
+    <p id="locCount">LOC: 0</p>
+    <div id="xpCount" style="color:lightgreen;">XP: 0</div>
+    <div id="goldenkeys">Golden Keys: 0</div>
+    <p id="clickValue"> </p>
+    
+    <p id="bonusKey"></p>
+    <p id="holdingKey" style="display: none;">Sorry, but I'm afraid that holding down the keys is a strict NO NO. <br> Getting LOC will be disabled for 3 Seconds </p> <br> <br>
+    <button id="upgradesButton">Upgrades</button> <br><br>
+    <button id="osButton">Buy OS</button><br><br>
+    <button id="tradeButton">Trade 100 LOC for XP ;)</button> <br><br> <br>
+    <button id="levelUpButton" style="display: none;">Level Up Now</button>
+
+    
+    <div id="upgradesContainer">
+      <h2>Upgrades</h2>
+      <ul id="upgradeList">
+        <li class="upgrade-item" onclick="upgradeLoc2(); ">+ 0.25<small> Cost: 100 LOC</small> </li>
+        <li class="upgrade-item" onclick="upgradeLoc5()">+ 0.5<small> Cost: 150 LOC</small> </li>
+        <li class="upgrade-item" onclick="upgradeLoc1()">+ 1<small> Cost: 225 LOC</small> </li>
+        <li class="upgrade-item" onclick="upgradeLoc10()">+ 10<small> Cost: 2249 LOC</small> </li>
+      </ul>
+    </div><br>
+    <div id="levelIndicator">Level 1</div> </div>
+  </div>
+  <div id="osMenu" class="hidden">
+  <div id="osShop"> <br> <br>
+  <h2>OS Shop</h2>
+  <div class="osItem">
+    <img src="os1.png" alt="OS 1" />
+    <h3>Windows Phone</h3>
+    <p>Golden Keys: 10</p>
+    <p>Autoclick: 0.5</p>
+    <button onclick="windowsphone();">Buy</button>
+  </div>
+  <div class="osItem">
+    <img src="os2.png" alt="OS 2" />
+    <h3>Amazon Kindle</h3>
+    <p>Golden Keys: 50</p>
+    <p>Autoclick: 0.75</p>
+    <button onclick="amazonkindle()">Buy</button>
+  </div>
+  <div class="osItem">
+    <img src="os3.png" alt="OS 3" />
+    <h3>Nokia</h3>
+    <p>Golden Keys: 75</p>
+    <p>Autoclick: 2</p>
+    <button onclick="nokia()">Buy</button>
+  </div>
+  <div class="osItem">
+    <img src="os4.png" alt="OS 4" />
+    <h3>Powerbook 100</h3>
+    <p>Golden Keys: 125</p>
+    <p>Autoclick: 4.5</p>
+    <button onclick="powerbook100()">Buy</button>
+  </div>
+  <div class="osItem">
+    <img src="os5.png" alt="OS 5" />
+    <h3>OffBrand WindowsXP</h3>
+    <p>Golden Keys: 300</p>
+    <p>Autoclick: 7</p>
+    <button onclick="offbrandwindowsxp()">Buy</button>
+  </div>
+  <div class="osItem">
+    <img src="os6.png" alt="OS 6" />
+    <h3>WindowsXP</h3>
+    <p>Golden Keys: 500</p>
+    <p>Autoclick: 9</p>
+    <button onclick="windowsxp()">Buy</button>
+  </div>
+  <div class="osItem">
+    <img src="os7.png" alt="OS 7" />
+    <h3>Arch Linux</h3>
+    <p>Golden Keys: 500000</p>
+    <p>Autoclick: 100</p>
+    <button onclick="archlinux()">Buy</button>
+  </div>
+  <!-- Add more OS items as needed -->
+</div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+  <script>
+    window.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    });
+  </script>
+  <script>
+    document.onkeydown = function (e) {
+      if (event.keyCode == 123) {
+        return false;
+      }
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        return false;
+      }
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+        return false;
+      }
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+        return false;
+      }
+    };
+  </script> 
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAh4HdFhLxko8KbJeC24D-i4nMhjh-RxO8",
+    authDomain: "tiwlocauth.firebaseapp.com",
+    projectId: "tiwlocauth",
+    storageBucket: "tiwlocauth.appspot.com",
+    messagingSenderId: "121621476354",
+    appId: "1:121621476354:web:467b523ad48e8bf590e31b",
+    measurementId: "G-SX18B0KJRT"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+
+
+</body>
+<h6> kwayden yuwu</h6>
+</html>

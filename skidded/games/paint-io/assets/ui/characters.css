@@ -1,0 +1,62 @@
+/* -----------------------------------------------------
+   created with https://www.codeandweb.com/texturepacker 
+   -----------------------------------------------------
+   $TexturePacker:SmartUpdate:e5a7ab7b6ce3af58ccfc1ac2137ea557:08c794cf2b4b9d1001d1247843015f08:837b9ff2f82fb6be3303060819e57008$
+   -----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(characters.png);}
+
+.abc_green_down {width:75px; height:92px; background-position: -1px -221px}
+.abc_red_down {width:75px; height:92px; background-position: -67px -1px}
+.abc_violet_down {width:75px; height:92px; background-position: -67px -95px}
+.abc_yellow_down {width:75px; height:92px; background-position: -78px -299px}
+.book_green_down {width:64px; height:101px; background-position: -1px -425px}
+.book_red_down {width:64px; height:101px; background-position: -210px -1px}
+.book_violet_down {width:64px; height:101px; background-position: -210px -104px}
+.book_yellow_down {width:64px; height:101px; background-position: -133px -403px}
+.bucket_green_down {width:64px; height:91px; background-position: -67px -600px}
+.bucket_red_down {width:64px; height:91px; background-position: -342px -99px}
+.bucket_violet_down {width:64px; height:91px; background-position: -405px -1px}
+.bucket_yellow_down {width:64px; height:91px; background-position: -287px -295px}
+.coffee_green_down {width:64px; height:108px; background-position: -1px -1px}
+.coffee_red_down {width:64px; height:108px; background-position: -1px -111px}
+.coffee_violet_down {width:64px; height:108px; background-position: -78px -189px}
+.coffee_yellow_down {width:64px; height:108px; background-position: -1px -315px}
+.donut_green_down {width:64px; height:102px; background-position: -144px -1px}
+.donut_red_down {width:64px; height:102px; background-position: -144px -105px}
+.donut_violet_down {width:64px; height:102px; background-position: -155px -299px}
+.donut_yellow_down {width:64px; height:102px; background-position: -67px -393px}
+.f1_green_down {width:64px; height:96px; background-position: -265px -400px}
+.f1_red_down {width:64px; height:96px; background-position: -265px -498px}
+.f1_violet_down {width:64px; height:96px; background-position: -133px -506px}
+.f1_yellow_down {width:64px; height:96px; background-position: -199px -506px}
+.hammer_green_down {width:64px; height:88px; background-position: -144px -209px}
+.hammer_red_down {width:64px; height:88px; background-position: -210px -207px}
+.hammer_violet_down {width:64px; height:88px; background-position: -133px -604px}
+.hammer_yellow_down {width:64px; height:88px; background-position: -199px -604px}
+.lego_green_down {width:61px; height:96px; background-position: -342px -1px}
+.lego_red_down {width:61px; height:96px; background-position: -331px -388px}
+.lego_violet_down {width:61px; height:96px; background-position: -353px -192px}
+.lego_yellow_down {width:61px; height:96px; background-position: -416px -187px}
+.matches_green_down {width:64px; height:91px; background-position: -408px -94px}
+.matches_red_down {width:64px; height:91px; background-position: -353px -290px}
+.matches_violet_down {width:64px; height:91px; background-position: -331px -584px}
+.matches_yellow_down {width:64px; height:91px; background-position: -394px -481px}
+.monster_green_down {width:64px; height:96px; background-position: -265px -596px}
+.monster_red_down {width:64px; height:96px; background-position: -276px -1px}
+.monster_violet_down {width:64px; height:96px; background-position: -276px -99px}
+.monster_yellow_down {width:64px; height:96px; background-position: -287px -197px}
+.pencil_green_down {width:64px; height:101px; background-position: -67px -497px}
+.pencil_red_down {width:64px; height:101px; background-position: -1px -528px}
+.pencil_violet_down {width:64px; height:101px; background-position: -199px -403px}
+.pencil_yellow_down {width:64px; height:101px; background-position: -221px -297px}
+.qubic_green_down {width:61px; height:96px; background-position: -331px -486px}
+.qubic_red_down {width:61px; height:96px; background-position: -394px -383px}
+.qubic_violet_down {width:61px; height:96px; background-position: -419px -285px}
+.qubic_yellow_down {width:61px; height:96px; background-position: -397px -574px}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from unblockeds-games.com/games/basketball-shooter/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 08:10:41 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <title>BasketBall</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libs/pixi.js"></script>
+    <script src="libs/pixi-spine.js"></script>
+
+    <!-- Utill -->
+    <script src="framework/utill/math.js"></script>
+    <script src="framework/utill/vector2.js"></script>
+    <script src="framework/utill/aabb2.js"></script>
+    <script src="framework/utill/matrix22.js"></script>
+    <script src="framework/utill/tween.js"></script>
+    <script src="framework/utill/keycode.js"></script>
+    <script src="framework/utill/csvParse.js"></script>
+    <script src="framework/utill/textFormat.js"></script>
+    <script src="framework/utill/utill.js"></script>
+
+    <!-- UI -->
+    <script src="framework/ui/ui_button.js"></script>
+    <script src="framework/ui/ui_bitmapText.js"></script>
+    <script src="framework/ui/ui_bitmapText2.js"></script>
+    <script src="framework/ui/ui_paintArea.js"></script>
+    <script src="framework/ui/ui_inputText.js"></script>
+    <script src="framework/ui/ui_gauge_circle.js"></script>
+    <script src="framework/ui/ui_scrollArea.js"></script>
+
+    <!-- PhysicsRus -->
+    <script src="framework/physicsRus/math.js"></script>
+    <script src="framework/physicsRus/util.js"></script>
+    <script src="framework/physicsRus/shape.js"></script>
+    <script src="framework/physicsRus/shape_circle.js"></script>
+    <script src="framework/physicsRus/shape_segment.js"></script>
+    <script src="framework/physicsRus/shape_poly.js"></script>
+    <script src="framework/physicsRus/joint.js"></script>
+    <script src="framework/physicsRus/joint_angle.js"></script>
+    <script src="framework/physicsRus/joint_distance.js"></script>
+    <script src="framework/physicsRus/joint_mouse.js"></script>
+    <script src="framework/physicsRus/joint_prismatic.js"></script>
+    <script src="framework/physicsRus/joint_revolute.js"></script>
+    <script src="framework/physicsRus/joint_rope.js"></script>
+    <script src="framework/physicsRus/joint_weld.js"></script>
+    <script src="framework/physicsRus/joint_wheel.js"></script>
+    <script src="framework/physicsRus/contact.js"></script>
+    <script src="framework/physicsRus/collision.js"></script>
+    <script src="framework/physicsRus/contactsolver.js"></script>
+    <script src="framework/physicsRus/space.js"></script>
+
+    <!-- Physics -->
+    <script src="framework/physics/physicsManager.js"></script>
+    <script src="framework/physics/triggerUpdate.js"></script>
+
+
+    <!-- Componenet -->
+    <script src="framework/componenet/component.js"></script>
+    <script src="framework/componenet/renderer.js"></script>
+    <script src="framework/componenet/renderer_sprite.js"></script>
+    <script src="framework/componenet/transform.js"></script>
+    <script src="framework/componenet/goDebug.js"></script>
+    <script src="framework/componenet/rusBody.js"></script>
+    <script src="framework/componenet/triggerBody.js"></script>
+
+
+    <!-- Core -->
+    <script src="framework/core/gameObject.js"></script>
+    <script src="framework/core/game.js"></script>
+    <script src="framework/core/update.js"></script>
+    <script src="framework/core/time.js"></script>
+    <script src="framework/core/camera.js"></script>
+    <script src="framework/core/sceneManager.js"></script>
+    <script src="framework/core/world.js"></script>
+    <script src="framework/core/actionData.js"></script>
+    <script src="framework/core/actionManager.js"></script>
+    <script src="framework/core/signal.js"></script>
+    <script src="framework/core/containerManager.js"></script>
+    <script src="framework/core/signalManager.js"></script>
+    <script src="framework/core/debugManager.js"></script>
+    <script src="framework/core/pointerManager.js"></script>
+    <script src="framework/core/soundManager.js"></script>
+    <script src="framework/core/httpManager.js"></script>
+
+
+    <script src="framework/core/factory.js"></script>
+	<script src="../../adinLoader.js"></script>
+</head>
+<body>
+    <!-- DATA -->
+    <script src="scripts/data/data.js"></script>
+
+    <!-- GAME -->
+    <script src="scripts/game/controller/ballController.js"></script>
+    <script src="scripts/game/controller/aiController.js"></script>
+    <script src="scripts/game/controller/singleMode.js"></script>
+    <script src="scripts/game/controller/doubleMode.js"></script>
+    <script src="scripts/game/controller/challengeMode.js"></script>
+    <script src="scripts/game/controller/goalController.js"></script>
+    <script src="scripts/game/controller/timeController.js"></script>
+
+    <script src="scripts/game/effect/lineTrace.js"></script>
+    <script src="scripts/game/effect/goalEffect.js"></script>
+    <script src="scripts/game/effect/pointEffect.js"></script>
+    <script src="scripts/game/effect/timeEffect.js"></script>
+
+    <script src="scripts/game/gameObject/goalpost.js"></script>
+    <script src="scripts/game/gameObject/ball.js"></script>
+    <script src="scripts/game/gameObject/player.js"></script>
+    <script src="scripts/game/gameObject/scoreBoard.js"></script>
+    <script src="scripts/game/gameObject/goalSegment.js"></script>
+    <script src="scripts/game/gameObject/playerScoreUI.js"></script>
+    <script src="scripts/game/gameObject/background.js"></script>
+    <script src="scripts/game/gameObject/lifeBar.js"></script>
+
+    <!-- SCENE -->
+    <script src="scripts/scene/testScene.js"></script>
+    <script src="scripts/scene/scene_preload.js"></script>
+    <script src="scripts/scene/scene_lobby.js"></script>
+    <script src="scripts/scene/scene_ingame.js"></script>
+    <script src="scripts/scene/scene_modeSelect.js"></script>
+
+    <!-- NETWORKMANAGER -->
+    <script src="scripts/network/networkManager.js"></script>
+    <script src="scripts/network/client.js"></script>
+
+
+    <!-- MAIN -->
+    <script src="scripts/main.js"></script>
+		<script>
+       if (typeof getAdinDomain !== 'undefined') {
+           const bodyTag = document.getElementsByTagName('body')[0];
+
+           let addAdinPreroll = document.createElement('script');
+            addAdinPreroll.src = getAdinDomain;
+            bodyTag.appendChild(addAdinPreroll);
+        }
+  </script>
+</body>
+
+<!-- Mirrored from unblockeds-games.com/games/basketball-shooter/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 08:12:13 GMT -->
+</html>

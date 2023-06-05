@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login/Signup Page</title>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+  <script src="firebase-config.js"></script>
+  <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+  <form id="registrationForm">
+    <h1>Login/Signup Page</h1>
+
+    <div id="loginDiv">
+      <h2>Login</h2>
+      <input type="email" id="loginEmail" placeholder="Email" /><br>
+      <input type="password" id="loginPassword" placeholder="Password" /><br>
+      <button onclick="login()">Login</button>
+    </div>
+
+    <div id="signupDiv">
+      <h2>Signup</h2>
+      <input type="email" id="signupEmail" placeholder="Email" /><br>
+      <input type="password" id="signupPassword" placeholder="Password" /><br>
+      <button onclick="signup()">Signup</button>
+    </div>
+
+    <div id="userDiv">
+      <h2>Welcome, <span id="userEmail"></span>!</h2>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  overflow:hidden;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 80%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 50%;
+  margin-right:25%;
+  margin-left:25%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#userDiv {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#userEmail {
+  font-weight: bold;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#signupEmail,
+#signupPassword,
+#loginEmail,
+#loginPassword {
+  width: 80%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+</style>

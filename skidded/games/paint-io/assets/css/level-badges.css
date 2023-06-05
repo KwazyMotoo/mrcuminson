@@ -1,0 +1,45 @@
+.level-badge {
+    background: url(../ui/vector/rank_1.svg) no-repeat;
+    width: 36px;
+    height: 30px;
+    color: white;
+    font-size: 19px;
+    padding-top: 15px;
+}
+
+.level-badge.badge-1 {
+    background: url(../ui/vector/rank_1.svg) no-repeat;
+    color: #d17b00;
+}
+
+.level-badge.badge-2 {
+    background: url(../../../../index.html) no-repeat;
+    color: #deebff;
+}
+
+.level-badge.badge-3 {
+    background: url(../../../../index.html) no-repeat;
+    color: #ffcf62;
+}
+
+.level-badge.badge-4 {
+    background: url(../../../../index.html) no-repeat;
+    color: #ffffff;
+}
+
+
+.level-badge.badge-5 {
+    background: url(../../../../index.html) no-repeat;
+    color: #ffffff;
+}
+
+.level-badge.small {
+    zoom: 0.65;
+    font-size: 21px;
+}
+
+.level-badge.skill-small {
+    zoom: 0.45;
+    font-size: 25px;
+    line-height: 17px;
+}

@@ -1,0 +1,29 @@
+/*Stylesheet*/
+body, html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: #ccc;
+}
+
+#orientation {
+    background-color: black;
+    background-image: url("../screen/screenlockd41d.png?");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}

@@ -1,0 +1,27 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    overflow: hidden;
+    touch-action: none;
+    -ms-touch-action: none;
+    background-color: #000000;
+}
+
+div#viewport {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+div#viewport>canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    touch-action: none;
+    -ms-touch-action: none;
+    touch-action-delay: none;
+}

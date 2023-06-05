@@ -1,0 +1,212 @@
+/*animation: nextLevelBadgeAnimationEffect-animation 600ms infinite alternate;*/
+/*-webkit-animation: nextLevelBadgeAnimationEffect-animation 600ms infinite alternate;*/
+/*}*/
+
+/*@keyframes nextLevelBadgeAnimationEffect-animation {*/
+/*    0% {*/
+/*        transform: scale(1);*/
+/*    }*/
+/*    100% {*/
+/*        transform: scale(1.25);*/
+/*    }*/
+/*}*/
+
+.tail.animation {
+    width:64px; height:95px;
+    display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(../ui/lobby/tail_animations.png);
+    margin: 0 auto;
+    transform: translateY(14px);
+}
+
+.tail.animation.green {
+    animation: tail-green-animation 500ms infinite steps(1);
+}
+@keyframes tail-green-animation {
+    0% {
+        background-position: -1px -1px
+    }
+    8% {
+        background-position: -1px -98px
+    }
+    16% {
+        background-position: -67px -1px
+    }
+    24% {
+        background-position: -67px -98px
+    }
+    32% {
+        background-position: -133px -1px
+    }
+    40% {
+        background-position: -133px -98px
+    }
+    48% {
+        background-position: -199px -1px
+    }
+    56% {
+        background-position: -199px -98px
+    }
+    64% {
+        background-position: -265px -1px
+    }
+    72% {
+        background-position: -265px -98px
+    }
+    80% {
+        background-position: -331px -1px
+    }
+    88% {
+        background-position: -331px -98px
+    }
+    96% {
+        background-position: -397px -1px
+    }
+    100% {
+        background-position: -397px -98px
+    }
+}
+
+.tail.animation.red {
+    animation: tail-red-animation 500ms infinite steps(1);
+}
+@keyframes tail-red-animation {
+    0% {
+        background-position: -463px -1px
+    }
+    8% {
+        background-position: -463px -98px
+    }
+    16% {
+        background-position: -529px -1px
+    }
+    24% {
+        background-position: -529px -98px
+    }
+    32% {
+        background-position: -595px -1px
+    }
+    40% {
+        background-position: -595px -98px
+    }
+    48% {
+        background-position: -661px -1px
+    }
+    56% {
+        background-position: -661px -98px
+    }
+    64% {
+        background-position: -727px -1px
+    }
+    72% {
+        background-position: -727px -98px
+    }
+    80% {
+        background-position: -793px -1px
+    }
+    88% {
+        background-position: -793px -98px
+    }
+    96% {
+        background-position: -859px -1px
+    }
+    100% {
+        background-position: -859px -98px
+    }
+}
+
+.tail.animation.violet {
+    animation: tail-violet-animation 500ms infinite steps(1);
+}
+@keyframes tail-violet-animation {
+    0% {
+        background-position: -925px -1px
+    }
+    8% {
+        background-position: -925px -98px
+    }
+    16% {
+        background-position: -991px -1px
+    }
+    24% {
+        background-position: -991px -98px
+    }
+    32% {
+        background-position: -1057px -1px
+    }
+    40% {
+        background-position: -1057px -98px
+    }
+    48% {
+        background-position: -1123px -1px
+    }
+    56% {
+        background-position: -1123px -98px
+    }
+    64% {
+        background-position: -1189px -1px
+    }
+    72% {
+        background-position: -1189px -98px
+    }
+    80% {
+        background-position: -1255px -1px
+    }
+    88% {
+        background-position: -1255px -98px
+    }
+    96% {
+        background-position: -1321px -1px
+    }
+    100% {
+        background-position: -1321px -98px
+    }
+}
+
+
+.tail.animation.yellow {
+    animation: tail-yellow-animation 500ms infinite steps(1);
+}
+@keyframes tail-yellow-animation {
+    0% {
+        background-position: -1387px -1px
+    }
+    8% {
+        background-position: -1387px -98px
+    }
+    16% {
+        background-position: -1453px -1px
+    }
+    24% {
+        background-position: -1453px -98px
+    }
+    32% {
+        background-position: -1519px -1px
+    }
+    40% {
+        background-position: -1519px -98px
+    }
+    48% {
+        background-position: -1585px -1px
+    }
+    56% {
+        background-position: -1585px -98px
+    }
+    64% {
+        background-position: -1651px -1px
+    }
+    72% {
+        background-position: -1651px -98px
+    }
+    80% {
+        background-position: -1717px -1px
+    }
+    88% {
+        background-position: -1717px -98px
+    }
+    96% {
+        background-position: -1783px -1px
+    }
+    100% {
+        background-position: -1783px -98px
+    }
+}

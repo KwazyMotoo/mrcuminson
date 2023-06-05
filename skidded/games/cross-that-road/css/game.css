@@ -1,0 +1,27 @@
+#wrongRotation {
+	display: none;
+	z-index: 15;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 1);
+}
+
+#wrongRotation img {
+	  display: block;
+	  width: 30%;
+	  margin-left: auto;
+	  margin-right: auto;
+	  position: relative;
+	  top: 40%;
+	  -webkit-transform: translateY(-50%);
+	  -ms-transform: translateY(-50%);
+	  transform: translateY(-50%);
+}
+
+@font-face {
+	font-family: 'gameFont';
+	src: url('../assets/fnt/forced_square.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

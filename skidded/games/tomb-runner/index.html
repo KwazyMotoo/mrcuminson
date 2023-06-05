@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from unblockeds-games.com/games/tomb-runner/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 08:09:07 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <link rel="apple-touch-icon" sizes="256x256" href="../../index.html">
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" sizes="256x256" href="../../index.html">
+
+    <title>tomb-runner</title>
+
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
+
+</head>
+
+<body>
+    <div id="container"></div>
+    <div id="loader">Loading...</div>
+    <script type="text/javascript">
+        var SpilData = {
+            id: '576742227280298086',
+            pauseGame: function() {
+                if (typeof GEMIOLI !== 'undefined' && GEMIOLI.Application)
+                    GEMIOLI.Application.dispatchEvent({
+                        type: 'blur'
+                    });
+            },
+            resumeGame: function() {
+                if (typeof GEMIOLI !== 'undefined' && GEMIOLI.Application)
+                    GEMIOLI.Application.dispatchEvent({
+                        type: 'focus'
+                    });
+            },
+            onLoad: function(callback) {
+                if (SpilData.apiInstance)
+                    callback();
+                else
+                    this.callbacks.push(callback);
+            },
+            callbacks: []
+        };
+        window.addEventListener('scroll', function() {
+            if (document.activeElement === document.body && window.scrollY > 0) {
+                document.body.scrollTop = 0;
+            }
+        }, true);
+    </script>
+    <script type="text/javascript">
+        var gameName = "tomb-runner.min.js";
+        var enableAnalytics;
+        var phaserAdProvider;
+
+
+
+        var fbrqBD = 8
+
+
+        //This all here is for cache busting;
+        function addScript(src, buster, callback) {
+            var s = document.createElement('script');
+            s.setAttribute('src', src + '?v=' + buster);
+            if (typeof callback === 'function') {
+                s.onload = callback;
+            }
+            document.body.appendChild(s);
+        }
+
+
+        addScript('version.js', Date.now(), function() {
+
+            addScript(gameName, version, function() {});
+
+        });
+    </script>
+</body>
+
+
+<!-- Mirrored from unblockeds-games.com/games/tomb-runner/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 08:09:12 GMT -->
+</html>

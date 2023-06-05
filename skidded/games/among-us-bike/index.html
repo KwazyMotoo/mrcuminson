@@ -1,0 +1,274 @@
+<html>
+
+
+<!-- Mirrored from unblockeds-games.com/games/among-us-bike/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 08:13:37 GMT -->
+<head>
+    <title>Among Us Bike Race</title>
+    <meta charset='utf-8' />
+    <meta name='renderer' content='webkit' />
+    <meta name='viewport'
+        content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' />
+    <meta name='apple-mobile-web-app-capable' content='yes' />
+    <meta name='full-screen' content='true' />
+    <meta name='x5-fullscreen' content='true' />
+    <meta name='360-fullscreen' content='true' />
+    <meta name='laya' screenorientation='landscape' />
+    <meta http-equiv='expires' content='0' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+    <meta http-equiv='expires' content='0' />
+    <meta http-equiv='Cache-Control' content='no-siteapp' />
+    <style>
+        /* html {
+			touch-action: none
+		} */
+        body {
+            cursor: default;
+            background: #161B29;
+            margin: 0 auto;
+            height: 100%;
+            width: 100%;
+        }
+
+        #YYGGamesSplash {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background: #061a25;
+            text-align: center;
+            vertical-align: middle;
+            z-index: 999;
+        }
+
+
+        #percent {
+            margin-top: 80px;
+            font-weight: bold;
+            font-size: 160%;
+        }
+
+        span {
+            margin: auto;
+        }
+
+        progress {
+            margin-top: 20px;
+            width: 65%;
+            background-color: #d7d7d7;
+            height: 10px;
+            border-radius: 20px;
+        }
+
+        progress::-webkit-progress-bar {
+            background-color: #d7d7d7;
+            border-radius: 20px;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: orange;
+            background-image: -webkit-linear-gradient(left, #f6ae25, #ffe65d);
+            border-radius: 20px;
+        }
+
+        #percent span:nth-child(1) {
+            color: #f6ae25;
+            animation: bounce 2s linear 0s infinite;
+        }
+
+        #percent span:nth-child(2) {
+            color: #f9c239;
+            animation: bounce 2s linear 0.09s infinite;
+        }
+
+        #percent span:nth-child(3) {
+            color: #fdd74e;
+            animation: bounce 2s linear 0.18s infinite;
+        }
+
+        #percent span:nth-child(4) {
+            color: #ffe65d;
+            animation: bounce 2s linear 0.27s infinite;
+        }
+
+        #percent span:nth-child(5) {
+            color: #c9e979;
+            animation: bounce 2s linear 0.36s infinite;
+        }
+
+        #percent span:nth-child(6) {
+            color: #8fe7a3;
+            animation: bounce 2s linear 0.44s infinite;
+        }
+
+        #percent span:nth-child(7) {
+            color: #69dcca;
+            animation: bounce 2s linear 0.52s infinite;
+        }
+
+        #percent span:nth-child(8) {
+            color: #5ed3e1;
+            animation: bounce 2s linear 0.6s infinite;
+        }
+
+        #percent span:nth-child(9) {
+            color: #57cae0;
+            animation: bounce 2s linear 0.68s infinite;
+        }
+
+        #percent span:nth-child(10) {
+            color: #48b5d3;
+            animation: bounce 2s linear 0.76s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            10%,
+            100% {
+                opacity: 1;
+            }
+
+            5% {
+                opacity: 0
+            }
+        }
+    </style>
+	<script src="../../adinLoader.js"></script>
+</head>
+
+<body>
+    <div id="YYGGamesSplash">
+        <div id="percent" onclick="cc.Application&&cc.Application.navigate_('LOADING','LOGO')">
+            <span>W</span>
+            <span>A</span>
+            <span>L</span>
+            <span>I</span>
+            <span>G</span>
+            <span>A</span>
+            <span>M</span>
+            <span>E</span>
+            <span>S</span>
+            <!-- <span >.</span>
+            <span >.</span> -->
+        </div>
+    </div>
+    <script type="text/javascript">
+        function loadLib(url) {
+            var script = document.createElement("script");
+            script.async = false;
+            script.src = url;
+            document.body.appendChild(script);
+        }
+    </script>
+    <!-- <script type="text/javascript" src="index.js"></script> -->
+
+    
+	<script type="text/javascript">
+
+		function loadJS(url, callback) {
+			var script = document.createElement('script'),
+				fn = callback || function () {};
+			script.type = 'text/javascript';
+			//IE
+			if (script.readyState) {
+				script.onreadystatechange = function () {
+					if (script.readyState == 'loaded' || script.readyState == 'complete') {
+						script.onreadystatechange = null;
+						fn();
+					}
+				};
+			} else {
+				//other borwser
+				script.onload = function () {
+					fn();
+				};
+			}
+			script.src = url;
+			document.getElementsByTagName('head')[0].appendChild(script);
+		}
+
+		function getQueryVariable(variable) {
+			var query = window.location.search.substring(1);
+			var vars = query.split("&");
+			for (var i = 0; i < vars.length; i++) {
+				var pair = vars[i].split("=");
+				if (pair[0] == variable) {
+					return pair[1];
+				}
+			}
+			return (false);
+		}
+
+		function notify(msg) {
+			try {
+				window.external.notify(msg);
+			} catch (e) {}
+		}
+
+		function showBanner() {
+			if (typeof sdk !== 'undefined' && sdk.showBanner !== 'undefined') {
+				sdk.showBanner();
+			}
+		}
+
+		window.addEventListener("message", function (e) {
+			// console.log("msg:" + e.data);
+			if (e.data == "showBanner") {
+				showBanner();
+			}
+		}, false);
+
+		var v = getQueryVariable("v");
+		if (!v) {
+			loadJS("index.js", function () {
+				
+			});
+		} else {
+			console.log(v);
+		}
+	</script>
+
+    <script type="text/javascript">
+        window.SDK_OPTIONS = {
+            gameId: "k03t1qgu1cajgph550bb4wq2bg68lsk6",
+            onEvent: function (a) {
+                switch (a.name) {
+                    case "SDK_GAME_PAUSE":
+                        // pause game logic / mute audio
+                        notify("SDK_GAME_PAUSE");
+                        break;
+                    case "SDK_GAME_START":
+                        // advertisement done, resume game logic and unmute audio
+                        notify("SDK_GAME_START");
+                        break;
+                    case "SDK_READY":
+                        // when sdk is ready
+                        notify("SDK_READY");
+                        break;
+                }
+            }
+        };
+        (function (a, b, c) {
+            var d = a.getElementsByTagName(b)[0];
+            a.getElementById(c) || (a = a.createElement(b), a.id = c, a.src = "https://lablockedgames.com/gamemo.js", d
+                .parentNode.insertBefore(a, d))
+        })(document, "script", "gamemonetize-sdk");
+    </script>
+	
+		<script>
+       if (typeof getAdinDomain !== 'undefined') {
+           const bodyTag = document.getElementsByTagName('body')[0];
+
+           let addAdinPreroll = document.createElement('script');
+            addAdinPreroll.src = getAdinDomain;
+            bodyTag.appendChild(addAdinPreroll);
+        }
+  </script>
+</body>
+
+
+<!-- Mirrored from unblockeds-games.com/games/among-us-bike/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 08:13:38 GMT -->
+</html>

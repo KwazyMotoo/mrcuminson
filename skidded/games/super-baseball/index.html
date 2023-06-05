@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from unblockeds-games.com/games/super-baseball/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 08:15:53 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+
+
+    <title>Super Baseball</title>
+
+
+
+
+
+</head>
+
+<body style="overflow: hidden;margin: 0;padding: 0;background-color: #000000;">
+
+    <div id="gameContainer"></div>
+    <div id="loader">Loading...</div>
+
+    <script type="text/javascript">
+        var gameName = "super-baseball.min5e1f.js?v=2";
+
+
+
+
+
+
+        //This all here is for cache busting;
+        function addScript(src, buster, callback) {
+            var s = document.createElement('script');
+            s.setAttribute('src', src + '?v=' + buster);
+            if (typeof callback === 'function') {
+                s.onload = callback;
+            }
+            document.body.appendChild(s);
+        }
+
+
+        addScript('version.js', Date.now(), function() {
+
+            addScript(gameName, version, function() {});
+
+        });
+    </script>
+</body>
+
+
+<!-- Mirrored from unblockeds-games.com/games/super-baseball/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 08:15:55 GMT -->
+</html>

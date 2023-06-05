@@ -1,0 +1,222 @@
+
+<!-- Mirrored from unblockeds-games.com/games/space-blaze-2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 08:07:19 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+    <title>Space Blaze 2</title>
+
+
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css">
+
+
+<style type="text/css">
+        #h5branding-wrapper {
+            position: relative;
+            z-index: 665;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        #h5branding-wrapper > #h5branding-bar, #h5branding-wrapper > img {
+            box-shadow: inset 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #h5branding-wrapper > img {
+            /* Needs appropriate vendor prefixes */
+            box-sizing: border-box;
+
+            /* This needs to be equal to strokeWidth */
+            padding: 4%;
+        }
+
+        #h5branding-wrapper > img {
+            border-radius: 50%;
+            box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.5), 5px 5px 7px rgba(0, 0, 0, 0.3);
+        }
+
+        #h5branding-container {
+            box-sizing: border-box;
+            position: absolute;
+            z-index: 664;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            overflow: hidden;
+        }
+        #h5branding-background {
+            position: absolute;
+            top: -25%;
+            left: -25%;
+            width: 150%;
+            height: 150%;
+            background-image: url(https://img.gamedistribution.com/a4d6c5960e164546b2dca794347136a4-512x512.jpeg);
+            background-color: #012f50;
+            background-blend-mode: multiply;
+            background-size: cover;
+            filter: blur(40px) brightness(1.5);
+        }
+
+        #h5branding-logo {
+            position: absolute;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+            top: 10%;
+        }
+
+        #h5branding-logo > img {
+            height: 150px;
+        }
+
+        #h5branding-title {
+            position: absolute;
+            width: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.5) 50%, transparent);
+            color: #fff;
+            text-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
+            bottom:10%;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 18px;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            line-height: 100%;
+        }
+        
+        #h5branding-button {
+            /* border: 0; */
+            padding: 10px 22px;
+            border-radius: 5px;
+            border: 3px solid white;
+            background: linear-gradient(0deg, #dddddd, #ffffff);
+            color: #222;
+            text-transform: uppercase;
+            text-shadow: 0 0 1px #fff;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            display: none;
+            width: 150px;
+            position: absolute;
+            top: 170px;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+        }
+        
+        @media (orientation: portrait) and (max-width: 1080px) {
+            #h5branding-logo > img {
+                height: initial;
+                width:100%;
+            }
+        }
+        
+        @media (orientation: landscape) and (max-height: 580px) {
+            #h5branding-title {
+                display: none;
+            }
+            
+            #h5branding-logo > img {
+                height: 100px;
+            }
+        }
+        
+        @media (orientation: landscape) and (max-height: 460px) {
+            #h5branding-title {
+                display: none;
+            }
+            
+            #h5branding-wrapper {
+                width: 110px;
+                height: 110px;
+            }
+            
+            #h5branding-logo {
+                top: 0;
+                transform: scale(0.7, 0.7);
+            }
+       
+             #h5branding-button {
+                top: initial;
+                width: 110px;
+                font-size: 14px;
+                position: absolute;
+                top: 140px;
+                left: 0;
+                right: 0;
+            }
+        }
+        
+        @media (orientation: portrait) and (max-width: 250px) {
+            #h5branding-logo {
+                top: 2%;
+            }
+        }
+        
+        @media (orientation: landscape) and (max-width: 330px) {
+             #h5branding-button {
+                top: 120px;
+            }
+            
+            #h5branding-logo > img {
+                height: 70px;
+            }
+        }
+        </style>
+
+<body>
+
+    <div id="orientation"></div>
+    <div id="content" style="max-width: 450px; max-height: 800px;"></div>
+    <div id="loader" style="display: none;">Loading...</div>
+
+    <script type="text/javascript">
+        var gameName = "space-blaze-2.min.js";
+
+
+
+
+
+
+        //This all here is for cache busting;
+        function addScript(src, buster, callback) {
+            var s = document.createElement('script');
+            s.setAttribute('src', src + '?v=' + buster);
+            if (typeof callback === 'function') {
+                s.onload = callback;
+            }
+            document.body.appendChild(s);
+        };
+
+
+        addScript('version.js', Date.now(), function() {
+
+            addScript(gameName, version, function() {
+                var game = new SpaceBlaze2.Game();
+            });
+
+        });
+    </script><script src="version67fb.js?v=1577210177341"></script>
+
+
+</body>

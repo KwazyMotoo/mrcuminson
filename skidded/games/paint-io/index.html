@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang=en>
+
+
+<!-- Mirrored from unblockeds-games.com/games/paint-io/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 08:03:49 GMT -->
+<head>
+    <meta charset=UTF-8>
+    <title>Paint.IO - Teams | GAMEE</title>
+    <meta name=viewport content="width=240,initial-scale=1,user-scalable=no">
+    <meta name=HandheldFriendly content=True>
+    <link rel=stylesheet href=assets/css/style.css>
+    <script>
+        window.disableGamee = !0
+    </script>
+</head>
+
+<body>
+    <textarea id=debug style=display:none></textarea>
+    <div id=tutorial-wrapper style=display:none>
+        <div class=center>
+            <div class=close-button id=close-tutorial style=display:none>Close</div>
+            <div class=text-wrapper>
+                <div class=text id=tutorialTextWrapper>Swipe in a direction to turn...</div>
+            </div>
+            <div class=image-wrapper-stripe>
+                <div class=bottom-shadow></div>
+            </div>
+            <div class=skipTutorial style=display:none></div>
+            <div class=image-wrapper id=tutorialSliderWrapper><img src=assets/ui/tutorial/pic_1.png></div>
+            <div class=slider-controls></div>
+        </div>
+    </div>
+    <div id=lobby-wrapper style=display:none>
+        <div class=level-progress-outer-wrapper>
+            <div class=level-progress-wrapper>
+                <div class="level-badge badge-1 small avatar-badge lobby-badge-current-level">?</div><img src=assets/ui/default_avatars/1.png class="lobby-player-avatar lobbyPlayerAvatar">
+                <div class="level-badge badge-1 lobby-badge-next-level">?</div>
+                <div class=dot></div>
+                <div class=level-xp-progress-bar-wrapper>
+                    <div class="value lobby-level-progress-value">?/?</div>
+                    <div class="inner lobby-level-progress-inner"></div>
+                    <div class=overlay></div>
+                </div>
+            </div>
+        </div>
+        <div class="center main-tab active" id=lobby-wrapper-center>
+            <div class=lobby-button-line>
+                <div class="show-friends-button offline"></div>
+                <div class=show-achievement-button>
+                    <div class=text>Quests <span id=achievementCounter>?/?</span></div>
+                </div>
+            </div>
+            <div class=character-selection-section>
+                <div class=bubble-get-character>
+                    <div class=text>Get 200%
+                        <div class=large>XP boost!</div>
+                    </div>
+                </div>
+                <div class="tail animation red"></div>
+                <div class=character-selection></div>
+            </div>
+            <div class=button-section>
+                <div class=broken-svg style=display:none></div>
+                <div class="button pressable-button" id=start>
+                    <div class=inner>Play</div>
+                </div>
+                <div class=changeRegionWrapper><a href=javascript:void(0) id=changeRegion><span id=regionName>Europe</span></a></div>
+            </div>
+            <div style=display:none>
+                <div id=specify-server class=button-blue style=zoom:.5>Specify server</div>
+                <br>
+                <div class=specify-server-wrapper style=display:none>
+                    <div id=join-specify-server class=button-blue>JOIN</div>
+                    <br>
+                    <div class=specify-server-container></div>
+                </div>
+            </div>
+        </div>
+        <div class="center main-tab lobby-tab-wrapper" id=skills-wrapper-center>
+            <div class=title-bar>
+                <div class=icon id=skillsIcon></div>
+                <div class=text>Skills</div>
+            </div>
+            <div class=content>
+                <div class=section-title>Tap to change</div>
+                <div class=skills-wrapper id=skills-settings-wrapper></div>
+                <div class=section-title>Skill list</div>
+                <div class=skill-list-wrapper>
+                    <div class=skill-list-slot>
+                        <div class=owned-mark></div>
+                        <div class="skill invisible"></div>
+                    </div>
+                    <div class=skill-list-slot>
+                        <div class=empty></div>
+                        <div class=lock></div>
+                        <div class="level-badge badge-1 skill-small">4</div>
+                    </div>
+                    <div class=skill-list-slot>
+                        <div class="skill invisible"></div>
+                    </div>
+                    <div class=skill-list-slot>
+                        <div class="skill invisible"></div>
+                    </div>
+                    <div class=skill-list-slot>
+                        <div class="skill invisible"></div>
+                    </div>
+                    <div class=skill-list-slot>
+                        <div class="skill invisible"></div>
+                    </div>
+                    <div class=skill-list-slot>
+                        <div class="skill invisible"></div>
+                    </div>
+                    <div class=skill-list-slot>
+                        <div class="skill invisible"></div>
+                    </div>
+                    <div class=skill-list-slot>
+                        <div class=empty></div>
+                        <div class=lock></div>
+                        <div class="level-badge badge-1 skill-small">4</div>
+                    </div>
+                    <div class=skill-list-slot>
+                        <div class=empty></div>
+                        <div class=lock></div>
+                        <div class="level-badge badge-1 skill-small">4</div>
+                    </div>
+                </div>
+                <div class=skill-desc-wrapper>
+                    <div class=left id=skill-desc-icon></div>
+                    <div class=right id=skill-desc-text></div>
+                </div>
+            </div>
+        </div>
+        <div class="center main-tab lobby-tab-wrapper" id=shop-wrapper-center>
+            <div class=title-bar>
+                <div class=icon></div>
+                <div class=text>Shop</div>
+            </div>
+            <div class=inner>
+                <div class=shop-tab-system-wrapper>
+                    <div class="button shop-tab-button active" data-target=consumable-shop-tab id=consumable-shop-tab-button>
+                        <div class=title>Consumables</div>
+                    </div>
+                    <div class="button shop-tab-button" data-target=skin-shop-tab id=skin-shop-tab-button>
+                        <div class=title>Skins</div>
+                    </div>
+                    <div class="button shop-tab-button" data-target=effect-shop-tab id=effect-shop-tab-button>
+                        <div class=title>Effects</div>
+                    </div>
+                </div>
+                <div class="row shop-tab active" id=consumable-shop-tab></div>
+                <div class="row shop-tab" id=skin-shop-tab></div>
+                <div class="row shop-tab" id=effect-shop-tab>Effects</div>
+            </div>
+        </div>
+        <div class=bottom-tab-system-wrapper>
+            <div class=inner>
+                <div class="button active main-tab-button" data-target=lobby-wrapper-center id=lobby-wrapper-center-tab-button>
+                    <div class="icon home"></div>
+                    <div class=title>Home</div>
+                </div>
+                <div class="button main-tab-button" data-target=skills-wrapper-center id=skills-wrapper-center-tab-button>
+                    <div class="icon skills"></div>
+                    <div class=title>Skills</div>
+                    <div class=badge id=skillBadge style=display:none>+?</div>
+                </div>
+                <div class="button main-tab-button" data-target=shop-wrapper-center id=shop-wrapper-center-tab-button>
+                    <div class="icon shop"></div>
+                    <div class=title>Shop</div>
+                    <div class=badge id=shopBadgeSales style=display:none>sales</div>
+                    <div class=badge id=shopBadgeNew style=display:none>new</div>
+                </div>
+                <div class="button main-tab-button inactive">
+                    <div class="icon create"></div>
+                    <div class=title>Create</div>
+                    <div class=lock></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=killLog></div>
+    <div id=rightClick style=display:none></div>
+    <div class=scoreTableWrapper>
+        <table id=scoreTableInner></table>
+    </div>
+    <div id=content style=display:block;width:100%;text-align:center></div>
+    <div class=ingame-modals>
+        <div class=dark-bg id=dark-bg-full style=display:none></div>
+        <div class=dark-bg id=dark-bg style=display:none>
+            <div class=return-to-menu></div>
+        </div>
+        <div class=dark-bg id=dark-bg-basic style=display:none></div>
+        <div class="friends-modal modal" style=display:none>
+            <div class=friend-close-button></div>
+            <div class="smail offline"></div>
+            <div class=title>Online friends</div>
+            <div id=tab-2 class="friends tab-content current">
+                <div class=no-friends style=display:none>
+                    <div class=text>Nobody is online</div>
+                </div>
+                <div class=friend-list style=display:none></div>
+                <div class=bottom-line></div>
+            </div>
+            <div class=button-find-friends>Invite friends</div>
+        </div>
+        <div class="loading-wrapper modal" id=lobby-spinner style=display:none><img src=assets/ui/spinner.gif width=64>
+            <div class=loading-status id=loading-status></div>
+        </div>
+        <div class="preferred-side modal" id=preferred-side style=display:none>
+            <div class=close-button id=preferredSideCloseButton></div>
+            <div class=title>Do you want to play against <span id=preferredSideName>friend</span> ?</div><img src=assets/ui/default_avatars/1.png class=avatar id=preferredSideAvatar>
+            <div class="button play-with-against-button" data-side=with>
+                <div class=inner>Play with</div>
+            </div>
+            <div class="button play-against play-with-against-button" data-side=against>
+                <div class=inner>Play against</div>
+            </div>
+        </div>
+        <div id=skillSelectModal class=modal style=display:none>
+            <div class=header>Choose skill</div>
+            <div class=wrapper id=skillSelectModalWrapper></div>
+        </div>
+        <div class=region-select style=display:none>
+            <div class=header><span class=globe id=globeIcon></span>Choose region</div>
+            <div class=region-card-wrapper>
+                <div class=region-card data-id=1>Europe
+                    <div class=recommended id=region1>Recommended</div>
+                </div>
+                <div class=region-card data-id=2>North America
+                    <div class=recommended id=region2>Recommended</div>
+                </div>
+                <div class=region-card data-id=3>South America
+                    <div class=recommended id=region3>Recommended</div>
+                </div>
+                <div class=region-card data-id=4>Asia
+                    <div class=recommended id=region4>Recommended</div>
+                </div>
+            </div>
+        </div>
+        <div class=vip-modal-wrapper style=display:none>
+            <div id=vipPurchaseClose></div>
+            <div class=vip-button></div>
+            <div class=thank-you-text>Thank you
+                <br>for supporting gamee!</div>
+            <div class=reward-wrapper>
+                <div class=present></div>
+                <div class=text>Here is something special for you:</div>
+            </div>
+            <div class=reward-items-wrapper>
+                <div class=item>
+                    <div class=title>Pencil character</div>
+                    <div class=image>
+                        <div class="sprite pencil_green_down"></div>
+                    </div>
+                </div>
+                <div class=item>
+                    <div class=title>Candy particles</div>
+                    <div class=image><img src=assets/ui/vector/particle_icons/oval_icon.svg></div>
+                </div>
+            </div>
+        </div>
+        <div class=achievement-list style=display:none>
+            <div class=achievement-list-close-button></div>
+            <div class=header><span class=medal-icon></span>Quests</div>
+            <div class=inner id=achievementListInner></div>
+        </div>
+        <div id=killStreak class=modal style=display:none>
+            <div class=bg></div><img src=assets/ui/kill_icons/double_kill.svg>
+            <div class=header>Double kill</div>
+        </div>
+        <div id=achievementContainer style=display:none>
+            <div class=character>
+                <div class=box>
+                    <div id=achievement-character></div>
+                </div>
+            </div>
+            <div class=center-text>
+                <div class=first-row>Quest completed</div>Goal:
+                <div class=goal-text id=achievementGoal>Conquer 500 tiles at once</div>
+                <br>Reward:
+                <div class=reward id=achievementReward>Get F1 character</div>
+            </div>
+        </div>
+        <div id=levelUp class=modal style=display:none>
+            <div class=confetsBg></div>
+            <div class=content>
+                <div id=levelUpBadge class="level-badge badge-1">5</div>
+                <div class=text>
+                    <div class=title>Level UP</div>
+                    <div class=note>Go to great heights painter!</div>
+                </div>
+            </div>
+        </div>
+        <div id=hostPlayerLeaveGame class="modal small-modal" style=display:none>
+            <div class=header><span id=leavePlayerName>Host player</span> left the game</div>
+        </div>
+        <div id=connectionLost class=modal style=display:none>
+            <div class=header id=connectionLostHeader>Connection lost</div>
+            <div class=detail id=connectionLostDetail>N/A</div>
+            <div class=tryJoinAgain style=display:none>Try again</div>
+        </div>
+        <div id=deadOverlay class="deadOverlay modal" style=display:none>
+            <div class="top box" id=deadOverlayTopBox>
+                <div class=bg></div>
+                <div class=avatar-wrapper id=deadOverlayAvatarWrapper><img src=assets/ui/default_avatars/1.png id=deadOverlayAvatarPlaceHolder class=avatar-placeholder> <img src="#" id=deadOverlayAvatar class=avatar style=display:none></div>
+                <div class=badge-wrapper>
+                    <div class="level-badge badge-1 small" id=deadOverlayLevelBadge>?</div>
+                </div>
+                <div class=motto id=deadOverlayMotto>"I`ve got you!"</div>
+                <div class=player-name id=killerName>Unknown</div>
+            </div>
+            <div class="bottom box offer-show" id=deadOverlayBottomBox>
+                <div class=title>Respawn in <span class=number id=respawnCountdown>5</span><span class=or-play-instantly> or play instantly!</span></div>
+                <div class=offer-box>
+                    <div class=badge>Respawn booster offer</div>
+                    <div class=cell-wrapper id=deadOverlayOfferBoxContent>
+                        <div class=cell>
+                            <div class=image><img src=assets/ui/items/shop_respawn_mini_1.svg></div>
+                            <div class="button dead-overlay-purchase-button">
+                                <div class=number>2</div>
+                                <div class=gemIcon></div>
+                            </div>
+                            <div class=title>1h period</div>
+                        </div>
+                        <div class=cell>
+                            <div class=image><img src=assets/ui/items/shop_respawn_mini_2.svg></div>
+                            <div class="button dead-overlay-purchase-button">
+                                <div class=number>5</div>
+                                <div class=gemIcon></div>
+                            </div>
+                            <div class=title>4h period</div>
+                        </div>
+                        <div class=cell>
+                            <div class=image><img src=assets/ui/items/shop_respawn_mini_3.svg></div>
+                            <div class="button dead-overlay-purchase-button">
+                                <div class=number>12</div>
+                                <div class=gemIcon></div>
+                            </div>
+                            <div class=title>12h period</div>
+                        </div>
+                    </div>
+                    <div class=active-booster-wrapper>
+                        <div class=wrapper>
+                            <div class=image><img src=assets/ui/items/shop_respawn_mini_1.svg></div>
+                            <div class=text-booster>Booster expire in <span id=deadOverlayBoosterTimeLeft>00:57:26</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id=teamLose class=modal style=display:none>
+            <div class=text>Your team was erased
+                <div class=lose-position-wrapper>Position <span class=lose-position>?</span>.</div>
+            </div>
+        </div>
+        <div class="gameOver modal" style=display:none>
+            <div class=winner-text>Red team wins!</div>
+            <div class=progress-final-bar>
+                <div class=team-progress-bar-wrapper>
+                    <div class=top-effect></div>
+                    <div class="win-flag win-pos"></div>
+                    <div class=progress-inner id=progressInnerGameOver></div>
+                </div>
+            </div>
+            <div class=player-positions>
+                <div class="shadow left"></div>
+                <div class=inner id=topPlayerLeaderBoardGameOver>
+                    <div class=player>
+                        <div class="team-dot red"></div>
+                        <div class=avatar-placeholder></div>
+                        <div class=character-placeholder></div>
+                        <div class=name>1. Lonely Qubic - 28 kills</div>
+                    </div>
+                    <div class=player>
+                        <div class="team-dot yellow"></div>
+                        <div class=avatar-placeholder></div>
+                        <div class=character-placeholder></div>
+                        <div class=name>2. Lonely Qubic - 19 kills</div>
+                    </div>
+                    <div class=player>
+                        <div class="team-dot green"></div>
+                        <div class=avatar-placeholder></div>
+                        <div class=character-placeholder></div>
+                        <div class=name>3. Marin Zakovec - 11 kills</div>
+                    </div>
+                </div>
+                <div class="shadow right"></div>
+            </div>
+            <div class=progress-summary>
+                <div class=left>
+                    <div class=name>You</div><img src=assets/ui/default_avatars/1.png class="lobby-player-avatar player-avatar">
+                    <div class="level-badge small avatar-badge badge-1" id=currentLevelBadgeGameOver>?</div>
+                </div>
+                <div class=right>
+                    <div class=level-xp-progress-bar-wrapper>
+                        <div class=value><span id=levelProgressBarValueFirstGameOver>?</span>/<span id=levelProgressBarValueSecondGameOver>?</span></div>
+                        <div class="inner progress" id=levelProgressBarInnerProgressGameOver style=width:0%></div>
+                        <div class=inner id=levelProgressBarInnerGameOver style=width:0%></div>
+                        <div class=overlay></div>
+                    </div>
+                    <div class=nextLevelBadgeAnimationEffect style=display:none></div>
+                    <div class="level-badge small badge-1" id=nextLevelBadgeGameOver>?</div>
+                    <table>
+                        <tr>
+                            <td>Position</td>
+                            <td id=playerPosition>?th</td>
+                        </tr>
+                        <tr>
+                            <td>XP</td>
+                            <td id=gainedXp>0</td>
+                        </tr>
+                        <tr>
+                            <td>Tiles taken</td>
+                            <td id=tilesTaken>0</td>
+                        </tr>
+                        <tr>
+                            <td>Your score</td>
+                            <td id=gameOverTotalScore>0</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class=countdown>New round begins in
+                <div class=number id=gameOverTime>5</div>
+            </div>
+            <div class=bottom-block id=gameOverBottomBlock>
+                <div class=inner>
+                    <div class=overlay>
+                        <div class="third-slot bottom-block-part" style=display:none>
+                            <div class="skill-slot slot skill-selector-slot active">
+                                <div class="skill invisible"></div>
+                            </div>
+                            <div class="skill-slot slot skill-selector-slot active">
+                                <div class="skill freezer"></div>
+                            </div>
+                            <div class="skill-slot slot skill-selector-slot locked-skill-slot" data-slot=2 data-locked=true>
+                                <div class=empty></div>
+                                <div class=lock></div>
+                                <div class="buy-button shop-button">
+                                    <div class=label id=gameOverBottomBlockThirdSlotPrice></div>
+                                    <div class=gemIcon></div>
+                                </div>
+                            </div>
+                            <div class="action-button gameOverToLobbyAction" data-target=consumable>
+                                <div class=icon></div>
+                                <div class=label>Shop</div>
+                            </div>
+                        </div>
+                        <div class="new-skill bottom-block-part" style=display:none>
+                            <div class=confetsBg></div>
+                            <div class=overConefets>
+                                <div class="skill-slot slot skill-selector-slot active">
+                                    <div class="skill invisible" id=newSkillGameOverSkill></div>
+                                    <div class="level-badge badge-1" id=newSkillGameOverLevelBadge>5</div>
+                                </div>
+                                <div class=text>Hurray
+                                    <br>You've unlocked new skill!</div>
+                                <div class="action-button gameOverToLobbyAction" data-target=skills>
+                                    <div class=icon></div>
+                                    <div class=label>Skills</div>
+                                    <div class=mark>!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="character-purchase bottom-block-part" style=display:none>
+                            <div class=character-wrapper-purchase>
+                                <div class="sprite monster_yellow_down"></div>
+                            </div>
+                            <div class=text>Customize your character!</div>
+                            <div class="action-button gameOverToLobbyAction" data-target=skin>
+                                <div class=icon></div>
+                                <div class=label>Shop</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=ingame-ui style=display:none>
+        <div class=average-fps-debug></div>
+        <div class=skill-slots-wrapper>
+            <div class="slot skill-slot" data-slot-position=0 id=slotPosition0>
+                <div class=skill></div>
+                <div class=lock></div>
+                <div class=progess-bars-wrapper>
+                    <div class=use-progress-bar></div>
+                    <div class=cooldown-progress-bar></div>
+                </div>
+                <div class="lock-level-badge level-badge badge-1" style=display:none>?</div>
+            </div>
+            <div class="slot skill-slot inactive" data-slot-position=1 id=slotPosition1>
+                <div class=skill></div>
+                <div class=lock></div>
+                <div class=progess-bars-wrapper>
+                    <div class=use-progress-bar></div>
+                    <div class=cooldown-progress-bar></div>
+                </div>
+                <div class="lock-level-badge level-badge badge-1" style=display:none>?</div>
+            </div>
+            <div class="slot skill-slot inactive locked" data-slot-position=2 id=slotPosition2>
+                <div class=skill></div>
+                <div class=lock></div>
+                <div class=progess-bars-wrapper>
+                    <div class=use-progress-bar></div>
+                    <div class=cooldown-progress-bar></div>
+                </div>
+                <div class="lock-level-badge level-badge badge-1" style=display:none>?</div>
+                <div class=gemIcon style=display:none></div>
+            </div>
+        </div>
+        <div class=roundTimeLeftWrapper style=display:none><span id=roundTimeLeft></span></div>
+        <div class=message-wrapper>
+            <div class=message-button id=showMessageList></div>
+            <div class=message-list style=display:none></div>
+        </div>
+        <div class=team-progress-bar-wrapper>
+            <div class=top-effect></div>
+            <div class="win-flag win-pos"></div>
+            <div class=progress-inner id=teamsProgressIngameInner></div>
+        </div>
+        <div class=latency-wrapper>
+            <div class=inner>
+                <div class=net-icon></div>
+                <div class="lagometer ok"></div>
+                <div class=ping style=display:none><span id=latencyValue>0</span>ms</div>
+            </div>
+            <div id=poorConnection style=display:none>Poor connection</div>
+        </div>
+    </div>
+    <div id=version class="version hide"></div>
+    <div class=load-font style=display:none>load font</div>
+    <script type=text/javascript src=js/bundle4217.js?02eaa9bd2e42d09c49dc></script>
+</body>
+
+
+<!-- Mirrored from unblockeds-games.com/games/paint-io/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 08:03:59 GMT -->
+</html>

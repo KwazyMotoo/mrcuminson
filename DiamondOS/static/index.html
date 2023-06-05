@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+</div>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/x-icon" href="/tiw2.png">
+    <script src="uv/uv.bundle.js" defer></script>
+    <script src="uv/uv.config.js" defer></script>
+    <script src="register-sw.js" defer></script>
+    <script src="search.js" defer></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="/about-blank.js"></script>
+  </head>
+
+  <body>
+    <video class="background-video" autoplay muted loop>
+      <source src="bg.mp4" type="video/mp4">
+      <!-- Add additional source elements for different video formats -->
+    </video><br>
+    <form id="uv-form" class="flex-center"  style="padding:0;">
+      <input 
+        id="uv-search-engine"
+        value="https://www.google.com/search?q=%s"
+        type="hidden"
+      /> 
+      <div class="group">
+      <h1 style="padding:0;">TIW Search Engine</h1>
+      <p>A site designed to bypass internet restricons, in seconds. <br> Presented by NCGaming and Kwazeh</p>
+      <input id="uv-address" name="search" type="text" placeholder="Search Google or type an URL" />
+    </form></div>
+    <div class="desc left-margin">
+      <p id="uv-error"></p>
+      <pre id="uv-error-code"></pre>
+    </div>
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dce0a5375e434fcd88d199e4269aa41e"}'></script><!-- End Cloudflare Web Analytics -->
+    <script src="/settings/js/settings.js"></script>
+    <script src="/settings/js/index.js"></script>
+    <script src="/settings/js/settings.js"></script>
+  </body>
+</html>

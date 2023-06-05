@@ -1,0 +1,216 @@
+@import url("lobby.css");
+@import url("hud.css");
+@import url("tutorial.css");
+@import url("levelProgressBar.css");
+@import url("level-badges.css");
+@import url("slick/slick.css");
+@import url("slick/slick-theme.css");
+@import url("../ui/characters.css");
+@font-face {
+    font-family: "AldotheApache";
+    src: url('../fonts/AldotheApache.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Days";
+    src: url('../fonts/Days.ttf') format("truetype");
+}
+html,
+body {
+    color: #f4fdff;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    image-rendering: optimizeSpeed;              /* Older versions of FF */
+    image-rendering: -moz-crisp-edges;           /* FF 6.0+ */
+    image-rendering: -webkit-optimize-contrast;  /* Webkit (non standard naming) */
+    image-rendering: -o-crisp-edges;             /* OS X & Windows Opera (12.02+) */
+    image-rendering: crisp-edges;                /* Possible future browsers. */
+    -ms-interpolation-mode: nearest-neighbor;    /* IE (non standard naming) */
+    image-rendering: pixelated;                  /* Chrome 41 */
+    font-family: 'AldotheApache', Arial
+}
+a {text-decoration: none;}
+
+.noPointerEvents {
+    pointer-events: none !important;
+}
+
+.load-font {
+    display: none;
+    position: absolute;
+    font-family: 'AldotheApache';
+}
+#content {
+    position: absolute;
+    z-index: 0;
+}
+#debug {
+    display: none;
+    position: absolute;
+    z-index: 100000;
+    width: 250px;
+    height: 90px;
+}
+.version {
+    right: 2px;
+    bottom: 2px;
+    font-size: 9px;
+    font-family: Arial;
+    color: #919191;
+    position: absolute;
+    z-index: 100000;
+    opacity: 0.5;
+    pointer-events: none;
+}
+.hide {
+    display: none;
+}
+
+#rightClick {
+    opacity:0; /* not FULLY transparent */
+    filter: alpha(opacity=0); /* IE8 and lower */
+    zoom: 1; /* Triggers "hasLayout" in IE 7 and lower */
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 0;
+    background: rgba(45, 150, 34, 0.18);
+}
+
+.killLog {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 102px;
+    height: 190px;
+    z-index: 10;
+    font-family: 'Days';
+    font-size: 9px;
+    color: white;
+    padding: 5px;
+    pointer-events: none;
+    overflow-x: hidden;
+}
+.killLog .killLogRow {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.27);
+    padding: 4px;
+}
+
+.killLog .killLogRow.me {
+    background-color: rgba(203, 203, 203, 0.52) !important;
+}
+
+.killLog .killLogRow.join {
+    color: lime;
+}
+.killLog .killLogRow.quit {
+    color: red;
+}
+.killLog .killLogRow.kill {
+    color: #7b7a7c;
+}
+.killLog .killLogRow.info {
+    color: #4354ff;
+}
+
+.killLog .killLogRow.kill div {
+    display: inline-block;
+}
+
+.killLog .killLogRow.kill .victim {
+    color: #e34233;
+}
+
+.killLog .killLogRow.kill .attacker {
+    color: #00be00;
+}
+
+.button-blue {
+    cursor: pointer;
+    text-align: center;
+    padding-top: 14px;
+    background: url(../../../../index.html) no-repeat;
+    width: 149px;
+    height: 49px;
+    display: inline-block;
+}
+
+#join-specify-server input {
+    display: inline-block;
+}
+
+.average-fps-debug {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    color: black;
+    font-size: 25px;
+    z-index: 5000000;
+}
+
+.average-fps-debug.lowRes {
+    color: red;
+}
+
+.coin {
+    width: 32px;
+    height: 32px;
+    background: url(../../../../index.html) no-repeat;
+    display: inline-block;
+}
+
+.gemIcon {
+    width: 16px;
+    height: 16px;
+    transform: translatey(2px);
+    background: url(../ui/vector/icnGem.svg) no-repeat;
+    display: inline-block;
+}
+
+.videoIcon {
+    width: 16px;
+    height: 16px;
+    transform: translateY(2px);
+    background: url(../../../../index.html) no-repeat;
+    display: inline-block;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(241, 241, 241, 0);
+    border-radius: 10px;
+    height: 10px;
+    left: -100px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #bfbfbf;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/*game distriubution*/
+#gdsdk__implementation {
+    z-index: 1000000 !important;
+}
+
+#gdsdk__advertisement {
+    z-index: 1000001 !important;
+}
+
+.gdsdkTop {
+    z-index: 1000000 !important;
+}

@@ -1,0 +1,169 @@
+/* CSS Styles for Clicker Game - Dark NO LIGHT THEME */
+body {
+  background-color: #222;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+#gameContent{
+    margin-top: 6.5%;
+}
+
+#clickerContainer {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  color: #fff;
+}
+
+#scoreContainer {
+  margin-bottom: 20px;
+}
+
+#locCount,
+#bonusKey,
+#holdingKey {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+#holdingKey {
+  display: none;
+  color: #ff7675;
+}
+
+#xpCount {
+  font-size: 20px;
+  color: #55efc4;
+  margin-bottom: 15px;
+}
+
+#buttonsContainer {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #00b894;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #00a885;
+}
+
+#upgradesContainer {
+  padding:5px;
+  display: none;
+}
+
+#upgradesContainer.active {
+  display: block;
+}
+
+h2 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.upgrade-item {
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #444;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.upgrade-item:hover {
+  background-color: #666;
+}
+
+.upgrade-item small {
+  font-size: 12px;
+  color: #888;
+}
+
+#levelIndicator {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+
+#goldenkeys, #clickValue {
+  margin-top: 10px;
+}
+
+/* CSS styles for download and upload buttons */
+#downloadButton,
+#osButton,
+#toggleButton,
+#uploadInput {
+  margin: 10px;
+}
+
+
+.hidden {
+  display: none;
+}
+
+#osShop {
+  text-align: center;
+}
+
+.osItem {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+.osItem img {
+  width: 20%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.osItem h3 {
+  font-size: 18px;
+  color:red;
+  margin-bottom: 5px;
+}
+
+.osItem p {
+  margin: 0;
+  color:lightgreen
+}
+
+.osItem button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#back{
+  color:lightblue;
+  text-align:center;
+  text-decoration: none;
+  font-weight:bold;
+}

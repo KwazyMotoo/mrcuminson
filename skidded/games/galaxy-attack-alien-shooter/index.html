@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from unblockeds-games.com/games/galaxy-attack-alien-shooter/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 08:01:28 GMT -->
+<head>
+    <meta charset="utf-8">
+    <title>Space Attack</title>
+    <link rel="icon" type="image/GIF" href="../../index.html" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="full-screen" content="yes" />
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+    <style>
+        body,
+        canvas,
+        div {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+    </style>
+
+
+<script src="../../adinLoader.js"></script>
+</head>
+
+<body style="padding:0; margin: 0; background: #000;">
+
+			<script type="text/javascript">
+   window.SDK_OPTIONS = {
+      gameId: "s5uhyst6m7imjksda8lwslah9dr53mov",
+      onEvent: function (a) {
+         switch (a.name) {
+            case "SDK_GAME_PAUSE":
+               // pause game logic / mute audio
+               break;
+            case "SDK_GAME_START":
+               // advertisement done, resume game logic and unmute audio
+               break;
+            case "SDK_READY":
+               // when sdk is ready
+               break;
+         }
+      }
+   };
+(function (a, b, c) {
+   var d = a.getElementsByTagName(b)[0];
+   a.getElementById(c) || (a = a.createElement(b), a.id = c, a.src = "https://lablockedgames.com/gamemo/gamemo2.js", d.parentNode.insertBefore(a, d))
+})(document, "script", "gamemonetize-sdk"); 
+</script>
+
+    <canvas id="gameCanvas" width="800" height="450"></canvas>
+
+
+    <div id="adContainer" style="position: absolute; width: 100%; height: 100%;z-index:9999;"></div>
+
+
+    <div id="adFailDes" style="display : none;position: absolute; width: 100%; height: 100%;z-index:99999;background: #ffc05f; ">
+        <table width="100%" height="100%">
+            <tr>
+                <td align="center">
+                    <img src="res/adDes.png" />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+    <script cocos src="game.min.js"></script>
+		<script>
+       if (typeof getAdinDomain !== 'undefined') {
+           const bodyTag = document.getElementsByTagName('body')[0];
+
+           let addAdinPreroll = document.createElement('script');
+            addAdinPreroll.src = getAdinDomain;
+            bodyTag.appendChild(addAdinPreroll);
+        }
+  </script>
+</body>
+
+
+<!-- Mirrored from unblockeds-games.com/games/galaxy-attack-alien-shooter/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 08:01:31 GMT -->
+</html>

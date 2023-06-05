@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from unblockeds-games.com/webgl/sniper-shot-bullet-time/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 07:54:11 GMT -->
+<head><title>Sniper Shot: Bullet Time Game Files - Crazy Games</title><meta charset="UTF-8" /><meta name="robots" content="noindex, follow" /><meta name="description" content="The game files for Sniper Shot: Bullet Time, a free browser game" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Accept-CH" content="DPR" /><meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no, minimal-ui" /><style id="pacman-styles">/* background */
+body {
+  background-image: linear-gradient(290deg, #3b2b73 55%, #6f2f93, #6f2f93);
+  background-position: center;
+  text-align: center;
+} 
+/* for positioning of pacman loader */
+body, html { height: 100%; }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+@keyframes rotate_preloadpacman_half_up {
+  0% {
+    transform: rotate(270deg); }
+  50% {
+    transform: rotate(360deg); }
+  100% {
+    transform: rotate(270deg); }
+}
+
+@keyframes rotate_preloadpacman_half_down {
+  0% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes preloadpacman-balls {
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-100px, -6.25px);
+  }
+}
+
+.preloadpacman {
+  position: relative;
+}
+.preloadpacman > div:nth-child(2) {
+  animation: preloadpacman-balls 1s -0.99s infinite linear;
+}
+.preloadpacman > div:nth-child(3) {
+  animation: preloadpacman-balls 1s -0.66s infinite linear;
+}
+.preloadpacman > div:nth-child(4) {
+  animation: preloadpacman-balls 1s -0.33s infinite linear;
+}
+.preloadpacman > div:nth-child(5) {
+  animation: preloadpacman-balls 1s 0s infinite linear;
+}
+.preloadpacman > div:first-of-type {
+  width: 0px;
+  height: 0px;
+  border-right: 25px solid transparent;
+  border-top: 25px solid #fff;
+  border-left: 25px solid #fff;
+  border-bottom: 25px solid #fff;
+  border-radius: 25px;
+  animation: rotate_preloadpacman_half_up 0.5s 0s infinite;
+  position: relative;
+  left: -30px;
+}
+.preloadpacman > div:nth-child(2) {
+  width: 0px;
+  height: 0px;
+  border-right: 25px solid transparent;
+  border-top: 25px solid #fff;
+  border-left: 25px solid #fff;
+  border-bottom: 25px solid #fff;
+  border-radius: 25px;
+  animation: rotate_preloadpacman_half_down 0.5s 0s infinite;
+  margin-top: -50px;
+  position: relative;
+  left: -30px;
+}
+.preloadpacman > div:nth-child(3),
+.preloadpacman > div:nth-child(4),
+.preloadpacman > div:nth-child(5),
+.preloadpacman > div:nth-child(6) {
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin: 2px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  transform: translate(0, -6.25px);
+  top: 25px;
+  left: 70px;
+}
+</style><script src="../../adinLoader.js"></script></head><body><div class="preloadpacman" id="pacman"><div></div><div></div><div></div><div></div><div></div></div><script type="text/javascript">function loadScript(url, callback) {
+  var head = document.head;
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = url;
+  script.async = true;
+  script.onreadystatechange = callback;
+  script.onload = callback;
+  head.appendChild(script);
+}
+var options = {"loader":"unity2021","loaderOptions":{"showProgress":true,"unityLoaderUrl":"Build/SniperShot_Crazy.loader.js","unityConfigOptions":{"codeUrl":"Build/SniperShot_Crazy.wasm.br","dataUrl":"Build/SniperShot_Crazy.data.br","frameworkUrl":"Build/SniperShot_Crazy.framework.js.br"}},"author":"GoGoMan","thumbnail":"https://images.crazygames.com/sniper-shot-bullet-time/20220616222647/sniper-shot-bullet-time-cover?auto=format,compress&q=75&cs=strip&w=360","gameName":"Sniper Shot: Bullet Time","gameHttps":true,"gameSlug":"sniper-shot-bullet-time","gameId":"20686","gameStatus":"published","showAdOnExternal":"ALWAYS","showAdOnInternal":"DEFAULT","disableEmbedding":false,"dollarRate":0.9453967215532489,"upvotes":3412,"downvotes":246,"releaseDate":"2022-06-17","locale":"en_US","controls":{"text":"<h3>Controls</h3>\n<ul>\n    <li>WASD or arrow keys = move</li>\n    <li>Right-click = aim</li>\n    <li>Left-click = shoot</li>\n    <li>Scroll = zoom in / out</li>\n    <li>Space = jump</li>\n</ul>"},"videoThumbnail":"https://videos.crazygames.com/sniper-shot-bullet-time/3/sniper-shot-bullet-time-thumbnail.mp4","video":{"original":"https://videos.crazygames.com/sniper-shot-bullet-time/3/sniper-shot-bullet-time.mp4","sizes":[{"width":205,"height":115,"location":"https://videos.crazygames.com/sniper-shot-bullet-time/3/sniper-shot-bullet-time-205x115.mp4"},{"width":249,"height":140,"location":"https://videos.crazygames.com/sniper-shot-bullet-time/3/sniper-shot-bullet-time-249x140.mp4"},{"width":364,"height":208,"location":"https://videos.crazygames.com/sniper-shot-bullet-time/3/sniper-shot-bullet-time-364x208.mp4"},{"width":494,"height":276,"location":"https://videos.crazygames.com/sniper-shot-bullet-time/3/sniper-shot-bullet-time-494x276.mp4"},{"width":611,"height":343,"location":"https://videos.crazygames.com/sniper-shot-bullet-time/3/sniper-shot-bullet-time-611x343.mp4"}]},"sandbox":true,"totalSize":"18 MB","minTimeBetweenMidrollAdsInMs":180000,"minTimeBetweenRewardedAdsInMs":5000,"noMidrollAdInFirstMinutes":3,"noRewardedAdInFirstMinutes":0,"categoryEnSlug":"shooting","tagsEnSlugs":["sniper","parkour","3d","webgl","jumping","arena","survive","first-person-shooter","killing"],"isKids":false,"hasMidroll":true,"hasRewarded":true,"fullscreen":"ADDS_VALUE","orientation":null,"category":"Sniper","categoryLink":"https://www.crazygames.comasdas/t/sniper","gameLink":"https://www.crazygames.comasdas/game/sniper-shot-bullet-time","alternativeGames":[{"category":"Shooting","gameSlug":"time-shooter-3-swat","gameName":"Time Shooter 3: SWAT","rating":9,"thumbnail":"https://images.crazygames.com/time-shooter-3-swat/20220321122622/time-shooter-3-swat-cover?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/time-shooter-3-swat/16/time-shooter-3-swat-205x115.mp4","gameLink":"https://www.crazygames.comasdas/game/time-shooter-3-swat","loader":"unity2020"},{"category":"Shooting","gameSlug":"time-shooter-2","gameName":"Time Shooter 2","rating":9.1,"thumbnail":"https://images.crazygames.com/games/time-shooter-2/cover-1655215853507.png?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/time-shooter-2/1/time-shooter-2-205x115.mp4","gameLink":"https://www.crazygames.comasdas/game/time-shooter-2","loader":"unity2020"},{"category":"Shooting","gameSlug":"horde-killer-you-vs-100","gameName":"Horde Killer: You vs 100","rating":9.1,"thumbnail":"https://images.crazygames.com/horde-killer-you-vs-100/20220415084727/horde-killer-you-vs-100-cover?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/horde-killer-you-vs-100/10/horde-killer-you-vs-100-205x115.mp4","gameLink":"https://www.crazygames.comasdas/game/horde-killer-you-vs-100","loader":"unity2020"},{"category":"Shooting","gameSlug":"bullet-force-multiplayer","gameName":"Bullet Force","rating":9,"thumbnail":"https://images.crazygames.com/games/bullet-force-multiplayer/cover-1588010858655.png?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/bullet-force-multiplayer/8/bullet-force-multiplayer-205x115.mp4","gameLink":"https://www.crazygames.comasdas/game/bullet-force-multiplayer","loader":"5.6.x"},{"category":".io","gameSlug":"shellshockersio","gameName":"Shell Shockers","rating":9.2,"thumbnail":"https://images.crazygames.com/shellshockersio/20211202050253/shellshockersio-cover?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/shellshockersio/2/shellshockersio-205x115.mp4","gameLink":"https://www.crazygames.comasdas/game/shellshockersio","loader":"iframe"},{"category":"Shooting","gameSlug":"zombies-shooter-part-2","gameName":"Zombies Shooter: Part 2","rating":9.4,"thumbnail":"https://images.crazygames.com/zombies-shooter-part-2/20220210091323/zombies-shooter-part-2-cover?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/zombies-shooter-part-2/4/zombies-shooter-part-2-205x115.mp4","gameLink":"https://www.crazygames.comasdas/game/zombies-shooter-part-2","loader":"unity2020"},{"category":"Shooting","gameSlug":"ghost-sniper","gameName":"Ghost Sniper","rating":8.7,"thumbnail":"https://images.crazygames.com/ghostsniper.png?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/ghost-sniper/1/ghost-sniper-205x115.mp4","gameLink":"https://www.crazygames.comasdas/game/ghost-sniper","loader":"5.4.x"},{"category":"Shooting","gameSlug":"bot-machines","gameName":"Assault Bots","rating":8.9,"thumbnail":"https://images.crazygames.com/bot-machines/20220511174833/bot-machines-cover?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/bot-machines/5/bot-machines-205x115.mp4","gameLink":"https://www.crazygames.comasdas/game/bot-machines","loader":"unity2020"},{"category":"Shooting","gameSlug":"hexagon-octagon","gameName":"Hexagon Octagon","rating":9,"thumbnail":"https://images.crazygames.com/hexagon-octagon/20220617170220/hexagon-octagon-cover?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/hexagon-octagon/1/hexagon-octagon-thumbnail.mp4","gameLink":"https://www.crazygames.comasdas/game/hexagon-octagon","loader":"unity2021"},{"category":".io","gameSlug":"bloxdhop-io","gameName":"Bloxd.io","rating":8.1,"thumbnail":"https://images.crazygames.com/bloxdhop-io/20210419140415/bloxdhop-io-cover?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/bloxdhop-io/1/bloxdhop-io-205x115.mp4","gameLink":"https://www.crazygames.comasdas/game/bloxdhop-io","loader":"iframe"}],"domainHasNoCMP":false};
+var SDK_READY = false;
+var GF_READY = false;
+var GF_LOAD_CALLED = false;
+loadScript("https://lablockedgames.com/crazygames/crazygames2.js", function() {
+    Crazygames.load(options).then(function() {
+      var pacmanWrapper = document.getElementById('pacman');
+      var pacmanStyles = document.getElementById('pacman-styles');
+
+      if (pacmanWrapper && pacmanStyles) {
+        pacmanWrapper.remove();
+        pacmanStyles.remove();
+      }
+    });
+});</script>	<script>
+       if (typeof getAdinDomain !== 'undefined') {
+           const bodyTag = document.getElementsByTagName('body')[0];
+
+           let addAdinPreroll = document.createElement('script');
+            addAdinPreroll.src = getAdinDomain;
+            bodyTag.appendChild(addAdinPreroll);
+        }
+  </script></body>
+<!-- Mirrored from unblockeds-games.com/webgl/sniper-shot-bullet-time/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 07:54:11 GMT -->
+</html>

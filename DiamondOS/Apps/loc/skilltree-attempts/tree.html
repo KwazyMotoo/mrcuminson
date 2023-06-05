@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Skill Tree</title>
+  <style>
+    .skill {
+      position: relative;
+      display: inline-block;
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid black;
+      border-radius: 5px;
+      background-color: lightblue;
+      cursor: pointer;
+    }
+    .skill.active {
+      background-color: yellow;
+    }
+    .skill.disabled {
+      background-color: lightgray;
+      cursor: not-allowed;
+    }
+    .skill-line {
+      position: absolute;
+      width: 2px;
+      background-color: black;
+      transform-origin: top center;
+      z-index: -1;
+    }
+    .skill-line.horizontal {
+      height: 2px;
+      top: calc(50% - 1px);
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+    .skill-line.vertical {
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <h1>Skill Tree</h1>
+  <div id="skillTreeContainer"></div>
+
+  <script src="skillTree.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from unblockeds-games.com/games/surviv-io/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 07:54:35 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <title>Surviv.IO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="../../../ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/popper.min.js"></script>
+    <style>
+        body {
+            background-color: #333641;
+        }
+    </style>
+    <script>
+        function arrayRandElement(arr) {
+            var rand = Math.floor(Math.random() * arr.length);
+            return arr[rand];
+        }
+        $(document).ready(function () {
+            $('#switchProxy').click(function () {
+                let proxy = [];
+                let newProxy = arrayRandElement(proxy);
+                $('#game').attr('src', newProxy);
+            })
+        })
+
+    </script>
+</head>
+<body>
+
+    <div class="container-fluid text-center text-light">
+        <div class="row">
+            <div class="col">
+                    <iframe id="game" src="#" allowfullscreen="allowfullscreen" frameborder="0" width="900px" height="675px"></iframe>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col">
+                <p>Surviv.IO still blocked at school?</p>
+                <button class="btn btn-danger" id="switchProxy">Switch Proxy Site</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- Mirrored from unblockeds-games.com/games/surviv-io/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 07:54:35 GMT -->
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from unblockeds-games.com/games/atari-breakout/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 07:55:51 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui, shrink-to-fit=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+
+
+    <title>Breakout</title>
+
+    <link rel="icon" type="image/png" href="../../index.html">
+    <!-- For apple devices -->
+    <link rel="apple-touch-icon" type="image/png" href="../../index.html" />
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
+
+    <script src="phaser/dist/phaser.min.js"></script>
+    <script src="webfontloader/webfontloader.js"></script>
+    <script src="%40azerion/h5-azerion-branding/dist/h5-azerion-branding.umd.js"></script>
+    <script src="%40azerion/h5-ad-wrapper/dist/h5-ad-wrapper.umd.js"></script>
+<script src="../../adinLoader.js"></script>
+</head>
+
+<body>
+
+    <div id="content"> </div>
+
+    <script type="text/javascript">
+        var libs = [];
+        var gtag;
+
+        var version = 'dev';
+
+
+        var gameName = "breakout.min.js";
+
+
+
+
+
+
+        //This all here is for cache busting;
+        function addScript(src, buster, callback) {
+            var s = document.createElement('script');
+            s.setAttribute('src', src + '?v=' + buster);
+            if (typeof callback === 'function') {
+                s.onload = callback;
+            }
+            document.body.appendChild(s);
+        }
+
+
+
+        addScript(gameName, version, function() {});
+    </script>
+		<script>
+       if (typeof getAdinDomain !== 'undefined') {
+           const bodyTag = document.getElementsByTagName('body')[0];
+
+           let addAdinPreroll = document.createElement('script');
+            addAdinPreroll.src = getAdinDomain;
+            bodyTag.appendChild(addAdinPreroll);
+        }
+  </script>
+</body>
+
+
+<!-- Mirrored from unblockeds-games.com/games/atari-breakout/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jun 2023 07:55:59 GMT -->
+</html>

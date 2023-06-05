@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "KomikaAxis";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/KomikaAxis.html") format("woff2"),
+    url("../../../../index.html") format("woff"),
+    url("../../../../index.html") format("truetype");
+}
+
+@font-face {
+  font-family: "Impact";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../../../index.html") format("woff2"),
+    url("../../../../index.html") format("woff"),
+    url("../../../../index.html") format("truetype");
+}
+
+@font-face {
+  font-family: "Rumpelstiltskin";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../../../index.html") format("woff2"),
+    url("../../../../index.html") format("woff"),
+    url("../../../../index.html") format("truetype");
+}

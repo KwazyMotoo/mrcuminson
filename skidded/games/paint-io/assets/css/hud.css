@@ -1,0 +1,575 @@
+@import url("ingame_modals.css");
+
+.ingame-ui {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5001;
+    position: absolute;
+}
+
+.latency-wrapper {
+    font-family: 'Days';
+    position: absolute;
+    z-index: 150;
+    top: 71px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.latency-wrapper .inner {
+    width: 80px;
+    margin-left: 181px;
+    white-space: nowrap;
+    font-size: 0;
+}
+.latency-wrapper .inner div {
+    font-size: 10px;
+    margin-right: 7px;
+}
+
+.latency-wrapper .net-icon {
+    background: url(../ui/net_icon.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
+.latency-wrapper .lagometer {
+    width: 16px;
+    height: 16px;
+    background: radial-gradient(#3e3e3e, #7b7b7b);
+    -webkit-border-radius: 99px;
+    -moz-border-radius: 99px;
+    border-radius: 99px;
+    display: inline-block;
+}
+
+.latency-wrapper .ping {
+    font-size: 10px;
+    display: inline-block;
+    color: #b2b2b1;
+    text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+    transform: translateY(-3px);
+}
+
+.latency-wrapper #poorConnection {
+    color: red;
+    font-size: 16px;
+    text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.lagometer.ok {
+    background: radial-gradient(#1fd200, #199C00);
+}
+
+.lagometer.poor {
+    background: radial-gradient(#e78400, #a85b00);
+}
+
+.lagometer.bad {
+    background: radial-gradient(#e70500, #7d0500);
+}
+
+
+.scoreTableWrapper {
+    width: 125px;
+    height: auto;
+    max-height: 230px;
+    background: rgba(0, 0, 0, 0.53);
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    top: 57px;
+    pointer-events: none;
+}
+
+.scoreTableWrapper tr.you {
+    color: white;
+    text-shadow: 1px 1px #ff0000;
+}
+
+@media only screen and (max-width: 450px) {
+    .scoreTableWrapper {
+        zoom: 0.8;
+        top: 67px;
+    }
+}
+
+.team-progress-bar-wrapper {
+    top: 16px;
+    width: 278px;
+    height: 49px;
+    z-index: 10001;
+    /*padding: 3px;*/
+    pointer-events: none;
+    /*background: black;*/
+    background: url(../ui/vector/bar_part_a.svg) no-repeat;
+}
+
+.ingame-ui .team-progress-bar-wrapper {
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.gameOver .team-progress-bar-wrapper {
+    transform: scale(0.9) translate(-30px, -13px);
+}
+.gameOver .team-progress-bar-wrapper .win-flag {
+    display: none;
+}
+
+.team-progress-bar-wrapper .top-effect {
+    position: absolute;
+    width: 278px;
+    height: 49px;
+    z-index: 10002;
+    background: url(../ui/vector/bar_part_b.svg) no-repeat;
+}
+
+.team-progress-bar-wrapper .progress-inner {
+    height: 44px;
+    width: 276px;
+    transform: translateY(1px);
+    border-radius: 13px;
+    overflow: hidden;
+    margin-left: 1.4px;
+    white-space: nowrap;
+}
+
+.win-pos {
+    left: 100%;
+}
+
+.team-progress-bar-wrapper .win-target {
+    position: absolute;
+    width: 5px;
+    height: 9px;
+    background: #000000;
+    z-index: 999;
+    top: 47px;
+}
+
+.team-progress-bar-wrapper .win-flag {
+    position: absolute;
+    z-index: 999;
+    top: 1px;
+    background: url(../ui/vector/finisher.svg);
+    width: 10px;
+    height: 44px;
+    display: inline-block;
+}
+
+.team-progress-bar-wrapper .inner {
+    /*float: left;*/
+    display: inline-block;
+    vertical-align: top;
+    height: 44px;
+    font-size: 17px;
+    overflow: hidden;
+    text-align: center;
+    border-right: 1px solid black;
+}
+
+.team-progress-bar-wrapper .inner:last-child {
+    border: 0;
+}
+
+.team-progress-bar-wrapper .inner .percent {
+    top: 10px;
+    z-index: 50;
+    position: relative;
+    padding-top: 4px;
+}
+
+.team-progress-bar-wrapper .inner.red {
+    background: #e51c2b;
+    color: #810018;
+}
+
+.team-progress-bar-wrapper .inner.green {
+    background: #0ae5bb;
+    color: #006875;
+}
+
+.team-progress-bar-wrapper .inner.yellow {
+    background: #f4ba00;
+    color: #c05200;
+}
+
+.team-progress-bar-wrapper .inner.violet {
+    background: #790095;
+    color: #340031;
+}
+
+.team-progress-bar-wrapper .inner.neutral {
+    background: #929292;
+    color: #000000;
+}
+
+
+.roundTimeLeftWrapper {
+    left: 50%;
+    top: 70px;
+    font-size: 26px;
+    font-family: Arial;
+    position: absolute;
+    z-index: 2;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: #b2b2b1;
+    text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+}
+
+.roundTimeLeftWrapper.gameOverComing {
+    animation: gameOverComing-animation 600ms infinite alternate;
+    -webkit-animation: gameOverComing-animation 600ms infinite alternate;
+}
+
+@keyframes gameOverComing-animation {
+    0% {
+        -webkit-transform: scale(1) translateX(-30%);
+        -moz-transform: scale(1) translateX(-30%);
+        -ms-transform: scale(1) translateX(-30%);
+        -o-transform: scale(1) translateX(-30%);
+        transform: scale(1) translateX(-30%);
+    }
+    100% {
+        -webkit-transform: scale(1.3) translateX(-30%);
+        -moz-transform: scale(1.3) translateX(-30%);
+        -ms-transform: scale(1.3) translateX(-30%);
+        -o-transform: scale(1.3) translateX(-30%);
+        transform: scale(1.3) translateX(-30%);
+    }
+}
+
+@-webkit-keyframes gameOverComing-animation {
+    0% {
+        -webkit-transform: scale(1) translateX(-30%);
+        -moz-transform: scale(1) translateX(-30%);
+        -ms-transform: scale(1) translateX(-30%);
+        -o-transform: scale(1) translateX(-30%);
+        transform: scale(1) translateX(-30%);
+    }
+    100% {
+        -webkit-transform: scale(1.3) translateX(-30%);
+        -moz-transform: scale(1.3) translateX(-30%);
+        -ms-transform: scale(1.3) translateX(-30%);
+        -o-transform: scale(1.3) translateX(-30%);
+        transform: scale(1.3) translateX(-30%);
+    }
+}
+.message-wrapper {
+    /*display: none;*/
+}
+
+.message-button {
+    pointer-events: all;
+    cursor: pointer;
+    position: absolute;
+    z-index: 999;
+    bottom: 16px;
+    right: 16px;
+    background: url(../ui/vector/emoji_button.svg) no-repeat;
+    width: 71px;
+    height: 50px;
+}
+
+.message-button.active {
+    background: url(../../../../index.html);
+}
+
+
+@media only screen and (max-height: 450px) {
+    .message-button {
+        width: 50px;
+        height: 35px;
+    }
+}
+
+.message-list {
+    z-index: 500;
+    position: absolute;
+    bottom: 83px;
+    right: 16px;
+    color: black;
+    text-align: right;
+}
+
+.message-list .message {
+    width: auto;
+    height: 16px;
+    color: black;
+    font-size: 20px;
+    background: white;
+    border-radius: 6px;
+    padding: 8px;
+    pointer-events: all;
+    cursor: pointer;
+    margin-top: 17px;
+    display: inline-block
+}
+
+.message-list .message .message-box-tail {
+    background: url(../ui/vector/bubble_piece.svg);
+    width: 15px;
+    height: 11px;
+    position: absolute;
+    right: 0;
+    margin-top: 5px;
+}
+
+@media only screen and (max-height: 450px) {
+    .message-list{
+        -webkit-transform: scale(0.75) translate(14%, 23%);
+        -moz-transform: scale(0.75) translate(14%, 23%);
+        -ms-transform: scale(0.75) translate(14%, 23%);
+        -o-transform: scale(0.75) translate(14%, 23%);
+        transform: scale(0.75) translate(14%, 23%);
+    }
+}
+
+.return-to-menu {
+    pointer-events: all;
+    position: absolute;
+    left: 23px;
+    top: 9px;
+    cursor: pointer;
+    background: url(../ui/vector/button_menu.svg);
+    width: 198px;
+    height: 60px;
+    z-index: 20001;
+}
+
+.return-to-menu.connectionLostReturnToMenu {
+    left: 84px;
+    top: 169px;
+    width: 129px;
+    height: 38px;
+}
+
+@media only screen and (max-height: 800px) {
+    .return-to-menu {
+        width: 98px;
+        height: 29px;
+    }
+}
+
+.skill-slots-wrapper {
+    bottom: 30px;
+    left: 0;
+    z-index: 1500;
+    position: absolute;
+    width: 80px;
+}
+
+.skill-slots-wrapper .level-badge {
+    margin-top: -29px;
+    margin-left: 68px;
+    text-align: center;
+    zoom: 0.7;
+    line-height: 11px;
+}
+
+.skill-slots-wrapper .slot {
+    background: rgba(0, 0, 0, 0.41);
+    width: 64px;
+    height: 64px;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 5px;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.skill-slots-wrapper .slot.inactive {
+    background: rgba(0, 0, 0, 0.41);
+}
+
+.skill-slots-wrapper .slot.locked .lock {
+    display: block;
+    width: 24px;
+    height: 26px;
+    margin: 0 auto;
+    margin-top: -68px;
+    margin-left: 20px;
+    position: absolute;
+}
+
+.skill-slots-wrapper .slot .lock {
+    display: none;
+}
+
+.skill-slots-wrapper .slot .cooldown-countdown {
+    color: #ffd847;
+    font-size: 44px;
+    display: none;
+    position: relative;
+    z-index: 1000;
+    margin-top: -50px;
+    margin-left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-shadow: #000000 0px 0px 3px;
+}
+
+.skill-slots-wrapper .slot.coolingdown .cooldown-countdown {
+    display: block;
+}
+
+.skill-slots-wrapper .slot .skill-slot-gem-lock {
+    background: url(../../../../index.html);
+    width: 32px;
+    height: 32px;
+    position: relative;
+    z-index: 1000;
+    margin-top: -18px;
+    margin-left: 29px;
+}
+
+.skill-slots-wrapper .slot .progess-bars-wrapper {
+    width: 64px;
+    height: 64px;
+    margin-top: -64px;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 13px;
+}
+
+.skill-slots-wrapper .slot .use-progress-bar {
+    width: 64px;
+    height: 64px;
+    background: #81ff6a;
+    opacity: 0.7;
+    display: none;
+}
+
+.skill-slots-wrapper .slot.active .use-progress-bar {
+    display: block;
+}
+
+.skill-slots-wrapper .slot .cooldown-progress-bar {
+    width: 64px;
+    height: 64px;
+    background: #847970;
+    opacity: 0.7;
+    display: none;
+}
+
+.skill-slots-wrapper .slot.coolingdown .cooldown-progress-bar {
+    display: block;
+}
+
+/* skills icons*/
+.skill-slots-wrapper .slot.inactive .icon {
+    display: none;
+}
+
+.skill-slots-wrapper .slot.active .icon {
+    display: block;
+}
+
+.slot .icon {
+    width: 48px;
+    height: 38px;
+    filter: invert(1);
+    margin: 0 auto;
+    position: relative;
+    z-index: 1000;
+    margin-top: 15%;
+}
+
+.icon.invisible {
+    background: url(../../../../index.html) no-repeat;
+    width: 29px;
+    height: 38px;
+}
+
+.icon.blink {
+    background: url(../../../../index.html) no-repeat;
+    width: 38px;
+    height: 38px;
+}
+
+.icon.claimArea {
+    background: url(../../../../index.html) no-repeat;
+    width: 38px;
+    height: 38px;
+}
+
+@media only screen and (max-height: 600px) {
+    .skill-slots-wrapper {
+        width: 50px;
+    }
+
+    .skill-slots-wrapper .slot {
+        width: 40px;
+        height: 40px;
+        margin: 2px;
+        border: 1px solid black;
+        border-radius: 9px;
+    }
+
+    .skill-slots-wrapper .skill-slot .skill {
+        width: 40px;
+        height: 40px;
+    }
+
+    .skill-slots-wrapper .icon.blink {
+        width: 29px;
+        height: 29px;
+    }
+    .skill-slots-wrapper .icon.invisible {
+        width: 21px;
+        height: 29px;
+    }
+    .skill-slots-wrapper .slot.inactive .lock,
+    .skill-slots-wrapper .slot.locked .lock {
+        width: 18px;
+        height: 20px;
+        margin-top: -45px;
+        margin-left: 10px;
+    }
+    .skill-slots-wrapper .icon.claimArea  {
+        width: 23px;
+        height: 24px;
+        margin-top: 8px;
+    }
+    .skill-slots-wrapper .slot .cooldown-countdown {
+        font-size: 32px;
+        margin-top: -34px;
+    }
+    .skill-slots-wrapper .level-badge {
+        margin-top: -35px;
+        margin-left: 66px;
+        text-align: center;
+        zoom: 0.45;
+    }
+    .ingame-ui .skill-slot .gemIcon {
+        margin-left: 44px;
+        zoom: 0.7;
+    }
+
+    .skill-slots-wrapper .slot .progess-bars-wrapper {
+        width: 40px;
+        height: 40px;
+        margin-top: -40px;
+        border-radius: 9px;
+    }
+}
